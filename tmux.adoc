@@ -1,0 +1,192 @@
+== TMUX
+
+
+-> _der Terminal Multiplexer_
+
+
+:encoding: utf-8
+:lang: de
+:keywords: tmux, documentation
+:revision: 0.1.0
+:copyright: dn
+:author: dom neu
+:date: 11.03.2020
+:toc: 
+:toc-title: Inhaltsverzeichnis
+
+
+
+Version: {revision} +
+Datum: {date} +
+Author: {author}
+// vim set: syntax=asciidoc
+
+==== Vorbereitung 
+
+[source,bash]
+.-tmux installieren
+----
+sudo apt install tmux
+----
+
+==== tmux starten
+
+[source,bash]
+.-neue tmux Session starten
+----
+tmux
+----
+
+[source,bash]
+.-neue tmux Session mit benutzerdef. Namen starten
+----
+tmux new -s *name*
+----
+
+[source,bash]
+.-sich einer tmux Session anschließen
+----
+tmux a 
+----
+
+[source,bash]
+.-tmux Sessions auflisten
+----
+tmux ls
+----
+
+[source,bash]
+.-tmux Session beenden
+----
+tmux kill-session
+----
+
+==== Fenster (Tabs)
+-> druecken des Präfixes STRG+b und dann:
+
+[width="60%",cols="<50,<30",options="header"]
+|===
+| Taste
+| Funktion
+
+| c
+| neuer Tab
+
+| ,
+| Tab benennen
+
+| w
+| Liste der Tabs
+
+| f
+| Tab finden
+
+| &
+| Tab schließen
+
+|===
+
+==== Tabs <splits> 
+-> druecken des Präfixes STRG+b und dann:
+
+
+[width="60%",cols="<50,<30",options="header"]
+|===
+| Taste
+| Funktion
+
+| %
+| Horizontal splitten
+
+| "
+| Vertikal splitten
+
+| o
+| zwischen Tabs springen
+
+| q
+| Tab Nummern anzeigen
+
+| x
+| Tab schließen
+
+|=== 
+
+==== Sonstiges
+-> druecken des Präfixes STRG+b und dann:
+
+
+[width="60%",cols="<50,<30",options="header"]
+|===
+| Taste
+| Funktion
+
+| d
+| Ablösen
+
+| t
+| große Uhr
+
+| ?
+| Liste der Shortcuts
+
+|===
+
+
+==== Templates fuer neue tmux Sessions erstellen mit _tmuxinator_
+->tmuxinator ist ein add-on mit dem Templates fuer neue Sessions erstellt werden koennen
+
+[source,bash]
+.-tmuxinator installieren 
+----
+sudo apt install tmuxinator
+----
+
+->Nach der Installation, lassen sich Templates wie folgt erstellen
+
+[source,bash]
+.-um bspw. ein Template fuer eine Session mit einem benutzerdef. Namen zu erstellen
+----
+tmuxinator new *NAME EINFUEGEN* <1>
+----
+
+<1> folgend work.yml genannt
+
+-> Hierdurch wird im Ordner ~ /.tmuxinator die Datei work.yml angelegt, die eine 
+Bsp.-Struktur sowie in auskommentierter Form mögliche Optionen mitsamt Beschreibung enthaelt.
+
+
+
+So kann festgelegt werden, welche Fenster in der Sitzung vorkommen sollen, welche Verzeichnisse in den einzelnen Fenstern aktiv und welche Programme ausgeführt werden sollen:
+
+[source,bash] 
+.#
+----
+~/.tmuxinator/work.yml
+
+name: work
+root: ~/data/homepage/work
+
+windows:
+  - linux: vim
+    root: ~ /data/homepage/work/linux
+  - python:
+    root: ~ /data/homepage/work/informatik/python
+  - mc: mc
+----
+
+-> Eine gemäß diesem Bsp. definierte neue tmux-Sitzung umfasst drei Fenster, die linux, python und mc genannt sind. Im ersten Fenster soll dabei vim aufgerufen werden, im dritten mc; die aktiven Arbeitsverzeichnisse können entweder explizit angegeben werden oder entsprechen dem angegebenen root-Pfad.
+
+[source,bash]
+.Die Sitzung kann folgendermaßen erzeugt:
+----
+tmuxinator work
+----
+
+[source,bash]
+.oder kürzer:
+----
+mux work
+----
+
+
