@@ -1,0 +1,118 @@
+= Vi improve Befehle
+
+== Einführungsweise Arbeitsweise des vi
+
+Der VI ist ein modaler Editor. Das bedeutet, dass er zwei Betriebsmodi kennt:
+
+* den Eingabemodus, in dem die Betätigung einer Taste zum Erscheinen des gewählten Zeichens in der bearbeiteten Datei und damit auf dem Bildschirm führt.
+
+* den Befehlsmodus, in dem die Tasten einfache bis komplexe Editorfunktionen auslösen beispielsweise das Löschen einer Zeile oder das Ersetzen aller 'ä' durch 'ae' in Zeilen, die nicht mit '>' beginnen. Der Befehlsmodus ist wiederum unterteilt:
+
+** in den unmittelbaren Modus (engl. immediate mode), in dem die eingegebenen, kurzen Kommandos selbst nicht angezeigt werden
+
+** und den ex-Modus (engl. ex mode, benannt nach dem Kommandozeileneditor ex). Die Befehlseingabe wird in der untersten Zeile des vi dargestellt.
+
+== Installation
+[bash,source]
+.Installationsbefehl
+----
+apt-get install vim
+----
+
+== Bewegungstasten
+[width="100%",cols="<40,<60",options="header"]
+|===
+
+|Taste
+|Funktion
+
+|h 
+|Cursor einen/mehrere Buchstaben nach links
+
+|l
+|Cursor einen/mehrere Buchstaben nach rechts
+
+|j
+|Cursor eine/mehrere Zeile(n) nach unten
+
+|k
+|Cursor eine/mehrere Zeile(n) nach oben
+
+|w
+|Cursor ein/mehrere Wort(e) nach rechts,nächster Wortanfang (word)
+
+|b
+|Cursor ein/mehrere Wort(e) nach links,vorheriger Wortanfang (begin)
+
+|e
+|Cursor ein/mehrere Wort(e) nach rechts, nächstes Wortende (end)
+
+|0 (Null)
+|Cursor auf Spalte 1/angegebene Spalte der aktuellen Zeile
+|===
+
+== Befehle 
+
+[width="100%",cols="<40,<60",options="header"]
+|===
+
+|Taste
+|Funktion
+
+|y 
+|kopieren 
+
+|p  
+|einfügen 
+
+|d
+|Zeile löschen 
+
+|x 
+|Zeichen löschen
+
+|===
+
+== Dateioperationen
+
+[width="100%",cols="<40,<60",options="header"]
+|===
+| Taste/Kombination
+| Funktion
+
+|  :w
+|  Datei speichern (write)
+
+|  :w!
+|  Datei speichern erzwingen
+
+|  :wq
+|  Datei speichern und vi beenden (write and quit)
+
+|  :q!
+|  Datei nicht speichern und vi beenden erzwingen (quit)
+
+
+
+|  :set number
+|  anzeigen von Zeilennummern
+|===
+
+== Eingabebefehle
+[width="100%",cols="<40,<60",options="header"]
+|===
+|  Taste
+|  Funktion
+
+|  i
+|  Texteingabe vor dem Cursor (insert)
+
+|  I
+|  Texteingabe am Zeilenanfang (Insert)
+
+|  
+|
+|===
+
+
+
