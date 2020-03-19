@@ -1,43 +1,41 @@
 = Bash
 
-== Einfuehrung
+== _Einfuehrung_
 
-Laut wikipedia:
-Bash (auch BASH oder bash), die Bourne-again shell, ist eine freie Unix-Shell unter GPL.
+Laut Wikipedia:
+Bash (auch BASH oder bash), die Bourne-again shell, ist eine freie Unix-Shell unter GPL. +
 
 Als Shell ist Bash eine Mensch-Maschine-Schnittstelle, die eine Umgebung (englisch environment) bereitstellt, in der zeilenweise Texteingaben und -ausgaben möglich sind. Letzteres erfolgt über die Befehlszeile, in die Befehle eingetippt und durch betätigen der Eingabetaste eingegeben werden. 
 
 Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, miteinander zu kombinieren und sie spielen eine zentrale Rolle im Alltag der Systemadministration.
 
 
-== Installation/Setup
+== _Installation/Setup_ +
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
 es wird keine installation benötigt abgesehen von der installation von Linux betriebssystem
 
-=== Vorbereitung
-Für die Bash wird keine weiter vorbereitung benötigt.
-Daher sie eine vorinstallierte shell ist!
+== _Vorbereitung_
+Für die Bash wird keine weitere Vorbereitung benötigt, da es eine vorinstallierte Anwendung ist. +
 
-== Anwendung
+== _Anwendung_
 Man nutz die shell für ausführungen von Befehlen direkt aus der Shell heraus
-innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
+innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen. +
 [source,bash]
 .um innerhalb seines verzeichnis ein neues verzeichnis zu erstellen benötigt man den befehl:
 ----
 mkdir (verzeichnisname)
 ----
--> der befehl bedeutet 'make directory' also ein verzeichnis erstellen.
-benutzen wir diesen befehl auf dem grundverzeichnis '/home/benutzer' können wir 'XYZ' als verzeichnis
-anlegen indem wir 
+-> der Befehl bedeutet _make directory_ also _ein Verzeichnis erstellen_.
+Benutzen wir diesen Befehl aus dem Grundverzeichnis heraus _/home/benutzer_ wird dort ein Ordner angelegt.
  
-
+ 
+-> Um jetzt in den angelegten Ordner zu wechseln
 [source,bash]
-.Mit dem befehl:
+.gibt man den Befehl ein
 ----
-cd
+cd (Ordnername)
 ----
-wechselt man das aktuelle verzeichniss auf ein ziel verzeichnis
-in diesem befehl __cd__ stecken die worte 'change' und 'directory'
+-> In diesem befehl __cd__ stecken die worte 'change' und 'directory'
 
 [source,bash]
 .Beispiel: befinden wir uns im grundverzeichnis: /home/benutzer/ können wir mit dem befehl
