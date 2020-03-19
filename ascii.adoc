@@ -1,0 +1,53 @@
+== was ist Asciidoc
+
+AsciiDoc ist eine vereinfachte Auszeichnungssprache, die dazu dient, Texte in verschiedenen Doku
+mentenformaten zu veröffentlichen.
+zum beispiel: HTML,pdf,Epub.
+
+== Wie installiere ich Asciidoc
+
+ apt-get install asciidoc
+
+=== um Titel zu identifizeren
+
+# = Dokument Title
+
+# == Heading H1
+
+# === Heading H2
+
+# ==== Heading h3
+
+== schriftarten
+
+*This is bold text*
+
+_This is cursiv text_
+
+`This is mono text`
+
+== Source CodecDarestellen:
+
+[source,bash]
+
+=== Tabellen beispiel
+
+==== Personen
+
+[width="60%",cols="<50,<30,>20",options="header,footer"]
+|===
+|Name
+|Geburtsdatum
+|Schugroesse
+
+|Peter
+|20.02.1980
+|45
+
+|Ute
+|01.05.1976
+|38
+
+|===
+
+
