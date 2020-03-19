@@ -51,7 +51,7 @@ unser aktuellen standort auf das verzeichnis 'XYZ'
 ----
 pwd
 ----
-nun wird angezeigt in welchem verzeichnis wir uns befinden.
+nun wird angezeigt in welchem Verzeichnis wir uns befinden.
 
 */home/benutzer/XYZ$*
 
@@ -60,19 +60,18 @@ nun wird angezeigt in welchem verzeichnis wir uns befinden.
 ----
 ls -la
 ----
-
 steht in dem falle das __ls__ für 'listing' also auflisten,
 die option __-la__ steht hierbei für 'long all' also lange, ausführliche liste.
 
+
+[source,bash]
+.die auflistung in voller Ausführung befielt man mit
 ----
-ls -la /home/benutzer/
+ls -la /home/benutzer
 ----
 
-befielt in diesem falle die auflistung des ordners '/home/benutzer/' 
-Die liste wird in voller ausführung angezeigt.
-
-will man jetzt in diesem Verzeichnis eine datei erstellen:
-
+[source,bash]
+.um eine Datei in diesem Verzeichnis zu erstellen
 ----
 oasis.txt
 ----
