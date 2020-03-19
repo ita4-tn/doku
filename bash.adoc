@@ -12,17 +12,17 @@ Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, mitei
 
 == _Installation/Setup_
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
-es wird keine installation benötigt.
+es wird keine Installation benötigt.
 
 == _Vorbereitung_
 Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
 
 == _Anwendung_
 Man nutzt die Shell für die Ausführung von Befehlen. +
-Innerhalb der shell kann man sich über Befehle in den Verzeichnissen bewegen.
+Innerhalb der Shell kann man sich über Befehle in den Verzeichnissen bewegen.
 
 [source,bash]
-.Um innerhalb seines Verzeichnis ein neues Verzeichnis zu erstellen benötigt man den Befehl:
+.Um innerhalb eines Verzeichnis ein neues Verzeichnis zu erstellen benötigt man den Befehl:
 ----
 mkdir *Verzeichnisname)*
 ----
