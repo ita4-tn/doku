@@ -1,6 +1,6 @@
 = Bash
 
-== Einfuehrung
+== _Einfuehrung_
 
 Laut wikipedia:
 Bash (auch BASH oder bash), die Bourne-again shell, ist eine freie Unix-Shell unter GPL.
@@ -10,76 +10,69 @@ Als Shell ist Bash eine Mensch-Maschine-Schnittstelle, die eine Umgebung (englis
 Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, miteinander zu kombinieren und sie spielen eine zentrale Rolle im Alltag der Systemadministration.
 
 
-== Installation/Setup
+== _Installation/Setup_
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
-es wird keine installation benötigt abgesehen von der installation von Linux betriebssystem
+es wird keine installation benötigt.
 
-=== Vorbereitung
-Für die Bash wird keine weiter vorbereitung benötigt.
-Daher sie eine vorinstallierte shell ist!
+== _Vorbereitung_
+Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
 
-== Anwendung
-Man nutz die shell für ausführungen von Befehlen direkt aus der Shell heraus
-innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
+== _Anwendung_
+Man nutzt die Shell für die Ausführung von Befehlen. +
+Innerhalb der shell kann man sich über Befehle in den Verzeichnissen bewegen.
+
 [source,bash]
-.um innerhalb seines verzeichnis ein neues verzeichnis zu erstellen benötigt man den befehl:
+.Um innerhalb seines Verzeichnis ein neues Verzeichnis zu erstellen benötigt man den Befehl:
 ----
-mkdir (verzeichnisname)
+mkdir *Verzeichnisname)*
 ----
--> der befehl bedeutet 'make directory' also ein verzeichnis erstellen.
-benutzen wir diesen befehl auf dem grundverzeichnis '/home/benutzer' können wir 'XYZ' als verzeichnis
-anlegen indem wir 
+-> Der Befehl bedeutet 'make directory' also ein Verzeichnis erstellen.
  
 
 [source,bash]
-.Mit dem befehl:
+.Mit dem Befehl:
 ----
-cd
+cd *Verzeichnisname*
 ----
-wechselt man das aktuelle verzeichniss auf ein ziel verzeichnis
-in diesem befehl __cd__ stecken die worte 'change' und 'directory'
+wechselt man aus dem aktuellen Verzeichnis zu einem Ziel Verzeichnis. +
+->In dem Befehl __cd__ stecken die Worte 'change' und 'directory'
 
 [source,bash]
-.Beispiel: befinden wir uns im grundverzeichnis: /home/benutzer/ können wir mit dem befehl
+.Beispiel: befinden wir uns im Grundverzeichnis: /home/Benutzer/ können wir mit dem Befehl
 ----
 cd /home/benutzer/XYZ
 ----
-unser aktuellen standort auf das verzeichnis 'XYZ'
+unser aktuellen Standort auf das Verzeichnis _XYZ_ wechseln. +
 
 [source,bash]
-.Um nun Herauszufinden in welchen Verzeichnis wir uns befinden: 'Public Works Department'
+.Um herauszufinden in welchem Verzeichnis wir uns befinden, den Befehl _'Public Works Department'_
 ----
 pwd
 ----
-nun wird angezeigt in welchem Verzeichnis wir uns befinden.
+eingegeben und uns wird angezeigt in welchem Verzeichnis wir sind. +
 
-*/home/benutzer/XYZ$*
 
 [source,bash]
-.Den aktuellen ordnerinhalt lässt sich anzeigen mit dem befehl:
+.Der aktuelle Ordnerinhalt lässt sich mit dem Befehl
 ----
 ls -la
 ----
-steht in dem falle das __ls__ für 'listing' also auflisten,
-die option __-la__ steht hierbei für 'long all' also lange, ausführliche liste.
+anzeigen. _ls_ steht hier für 'listing' also auflisten,
+die Option _-la_ steht hier für 'long all', also eine lange, ausführliche Liste.
 
 
 [source,bash]
-.die auflistung in voller Ausführung befielt man mit
+.Die Auflistung in langer Ausführung zB im _Home_ Verzeichnis bekommt man mit
 ----
-ls -la /home/benutzer
+ls -la /home/Benutzer
 ----
 
-[source,bash]
-.um eine Datei in diesem Verzeichnis zu erstellen
-----
-oasis.txt
-----
-Somit wird eine Textdatei angelegt mit dem namen 'oasis'
 
-=== Formatierung
-Es handelt sich um eine shell sodass eine Formatierung nicht vorhanden ist
+== _Formatierung_
 
-=== Ausgabe
-Die ausgabe findet ausschliesslich in textbasierter ausgabe in der shell statt
+-> Es handelt sich um eine Shell, sodass eine Formatierung nicht vorhanden ist.
+
+== _Ausgabe_
+
+-> Die Ausgabe findet ausschliesslich in textbasiert statt.
 
