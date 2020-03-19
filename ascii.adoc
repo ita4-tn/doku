@@ -8,6 +8,12 @@ zum beispiel: HTML,pdf,Epub.
 
  apt-get install asciidoc
 
+
+
+Asciidoctor erzeugt seine dateien im *.adoc* Format
+dieses Format eignet sich hervorragend um damit man-pages oder auch HTML dateien besispielsweise damit zu erstellen.
+
+
 === um Titel zu identifizeren
 
 # = Dokument Title
@@ -18,7 +24,7 @@ zum beispiel: HTML,pdf,Epub.
 
 # ==== Heading h3
 
-== schriftarten
+== Schriftarten
 
 *This is bold text*
 
@@ -49,5 +55,113 @@ _This is cursiv text_
 |38
 
 |===
+
+=== 
+
+Man sieht im oberen Abschnitt die einzelnen Bearbeitungsmöglichkeiten um seine .adoc datei zu gestalten.
+
+Ebenfalls wird fast bei allen Systemen im asciidoc auch eine farbliches Highlighten aktiviert.
+Dies zeigt beispielsweise an, welcher Befehl ausgeführt wird oder um welche art der Überschrift es sich handelt.
+
+Highlighting ist in diesem falle sinnvoll um besser nachvollziehen zu können was sich in der Befehlszeile befindet.
+
+== Diagramme
+
+um Diagramme erstellen zu können und sie im asciidoctor nutzen zu nutzen,benötigt es die vorhergehende zeile *[ditaa]*
+ 
+[ditaa]
+....
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        | --+ Asciidoctor +--> |               |
+ |  Text  |   +-------------+    |   Beautiful   |
+ |Document|   |   !magic!   |    |    Output     |
+ |     {d}|   |             |    |               |
+ +---+----+   +-------------+    \---------------/
+....
+mit diesem Befehl inklusive der nachfolgenden grafik in originalausgabe,
+ 
+....
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        | --+ Asciidoctor +--> |               |
+ |  Text  |   +-------------+    |   Beautiful   |
+ |Document|   |   !magic!   |    |    Output     |
+ |     {d}|   |             |    |               |
+ +---+----+   +-------------+    \---------------/
+....
+
+kann die obere grafik erzeugt werden.
+
+....
+[ditaa]
+
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+....
+
+
+
+die Grafiken können von hand erledigt werden indem man die zur verfügung gestellten zeichen verwendet oder man nutz die webseiten:
+
+http://stable.ascii-flow.appspot.com/#Draw
+
+oder aber auch auf:
+
+http://asciiflow.com/
+
+
+
+
+=== Features
+Asciidoctor kann mit vielen verschiedenen Features ausgestattert werden.
+Diese Features sind vielseitig einsetzbar.
+
+In unserem Fall ist es _asciidoctor-PDF_
+
+Wir erzeugen eine datei im *.adoc* Format.
+
+
+*beispiel.adoc*
+
+....
+`Asciidoctor erzeugt seine dateien im *.adoc* Format
+dieses Format eignet sich hervorragend um damit man-pages oder auch HTML dateien besispielsweise damit zu erstellen.`
+....
+
+Diese datei ist jetzt in unserem verzeichnis _/home/desktop/beispiel.adoc_
+
+Möchte man jetzt diese datei in eine PDF format ausgeben lassen, so holt man sich mit dem PDF feature die ausgabe Möglichkeit.
+
+----
+asciidoctor-pdf beispiel.adoc
+----
+
+Es wird im Hintergund die *.adoc* datei kopiert und in eine *.pdf* datei umgewandelt +
+
+In unserem ordner _/home/desktop/_ befinden sich nun 2 Dateien.
+
+`beispiel.adoc` & `beispiel.pdf`
+
+Beide dateien haben etwas miteinander zu tun.
+Die *.adoc* Datei kann aber im gegensatz zu der *.pdf* Datei aber immer erweitert werden und verändert werden.
+
 
 
