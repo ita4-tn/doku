@@ -215,19 +215,45 @@ Nun zeigt er die gewänderte Datei unter git status an.
 git push -u origin master
 ----
  
+=== Git Branch
 
+Git-Branches sind quasi Verweise auf einen Snapshot deiner Änderungen. Wenn du ein neues Feature hinzufügen oder einen Fehler beheben möchtest, legst du einen neuen Branch an, der deine (großen oder kleinen) Änderungen enthält. Auf diese Weise ist es weniger wahrscheinlich, dass unstabiler Code in die Haupt-Codebasis gemergt wird, und du hast die Möglichkeit, deinen zukünftigen Verlauf zu bereinigen, bevor du den Merge in den Haupt-Branch durchführst.
 
+[source,bash]
+.Führt alle Branches in deinem Repository auf.
+----
+git branch
+----
 
+[source,bash]
+.Mit diesem Befehl erstellst du einen neuen Branch mit dem Namen, den du für <branch> angibst.
+----
+git branch <branchname>
+----
 
+[source,bash]
+.und mit diesem Befehl wechselst den Branch.
+----
+git checkout <Branchname>
+----
 
+[source,bash]
+.Datien vom github runterladen.
+----
+git pull origin <branchname>
+----
 
+[source,bash]
+.Datein zu github Hochladen.
+----
+git push origin <branchname>
+----
 
-
-
-
-
-
-
+[source,bash]
+.um zu mergen muss man als branch master sein.
+----
+git merge <branchname>
+----
 
 
 
