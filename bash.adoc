@@ -21,37 +21,33 @@ Daher sie eine vorinstallierte shell ist!
 == Anwendung
 Man nutz die shell für ausführungen von Befehlen direkt aus der Shell heraus
 innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
-
-um innerhalb seines verzeichnis ein neues verzeichnis zu erstellen benötigt man den befehl:
-
+[source,bash]
+.um innerhalb seines verzeichnis ein neues verzeichnis zu erstellen benötigt man den befehl:
 ----
 mkdir (verzeichnisname)
 ----
-der befehl bedeutet 'make directory' also ein verzeichnis erstellen.
+-> der befehl bedeutet 'make directory' also ein verzeichnis erstellen.
 benutzen wir diesen befehl auf dem grundverzeichnis '/home/benutzer' können wir 'XYZ' als verzeichnis
 anlegen indem wir 
-
-----
-mkdir XYZ
-----
-eingeben und mit 'return' bestätigen.
  
-Mit dem befehl:
 
+[source,bash]
+.Mit dem befehl:
 ----
 cd
 ----
 wechselt man das aktuelle verzeichniss auf ein ziel verzeichnis
 in diesem befehl __cd__ stecken die worte 'change' und 'directory'
 
-beispiel: befinden wir uns im grundverzeichnis: /home/benutzer/ können wir mit dem befehl
-
+[source,bash]
+.Beispiel: befinden wir uns im grundverzeichnis: /home/benutzer/ können wir mit dem befehl
 ----
 cd /home/benutzer/XYZ
 ----
 unser aktuellen standort auf das verzeichnis 'XYZ'
-Um nun Herauszufinden in welchen Verzeichnis wir uns befinden: 'Public Works Department'
 
+[source,bash]
+.Um nun Herauszufinden in welchen Verzeichnis wir uns befinden: 'Public Works Department'
 ----
 pwd
 ----
@@ -59,8 +55,8 @@ nun wird angezeigt in welchem verzeichnis wir uns befinden.
 
 */home/benutzer/XYZ$*
 
-Den aktuellen ordnerinhalt lässt sich anzeigen mit dem befehl:
-
+[source,bash]
+.Den aktuellen ordnerinhalt lässt sich anzeigen mit dem befehl:
 ----
 ls -la
 ----
