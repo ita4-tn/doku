@@ -1,4 +1,4 @@
-== was ist Asciidoc
+== Was ist Asciidoc
 
 AsciiDoc ist eine vereinfachte Auszeichnungssprache, die dazu dient, Texte in verschiedenen Doku
 mentenformaten zu veröffentlichen.
@@ -67,25 +67,9 @@ Highlighting ist in diesem falle sinnvoll um besser nachvollziehen zu können wa
 
 == Diagramme
 
-um Diagramme erstellen zu können und sie im asciidoctor nutzen zu nutzen,benötigt es die vorhergehende zeile *[ditaa]*
+Um Diagramme erstellen zu können und sie im asciidoctor nutzen zu nutzen,benötigt es die vorhergehende zeile *[ditaa]*
  
-[ditaa]
-....
-                   +-------------+
-                   | Asciidoctor |-------+
-                   |   diagram   |       |
-                   +-------------+       | PNG out
-                       ^                 |
-                       | ditaa in        |
-                       |                 v
- +--------+   +--------+----+    /---------------\
- |        | --+ Asciidoctor +--> |               |
- |  Text  |   +-------------+    |   Beautiful   |
- |Document|   |   !magic!   |    |    Output     |
- |     {d}|   |             |    |               |
- +---+----+   +-------------+    \---------------/
-....
-mit diesem Befehl inklusive der nachfolgenden grafik in originalausgabe,
+Mit dieser vorhergehenden Befehlszeile inklusive der nachfolgenden grafik in originalausgabe,
  
 ....
                    +-------------+
@@ -129,8 +113,8 @@ http://asciiflow.com/
 
 
 
-
 === Features
+
 Asciidoctor kann mit vielen verschiedenen Features ausgestattert werden.
 Diese Features sind vielseitig einsetzbar.
 
@@ -143,7 +127,7 @@ Wir erzeugen eine datei im *.adoc* Format.
 
 ....
 `Asciidoctor erzeugt seine dateien im *.adoc* Format
-dieses Format eignet sich hervorragend um damit man-pages oder auch HTML dateien besispielsweise damit zu erstellen.`
+Dieses Format eignet sich hervorragend um damit man-pages oder auch HTML dateien besispielsweise damit zu erstellen.`
 ....
 
 Diese datei ist jetzt in unserem verzeichnis _/home/desktop/beispiel.adoc_
