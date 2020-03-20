@@ -185,7 +185,7 @@ vi beispiel.txt
 git add beispiel.txt
 ----
 
-=== Dateien synchronisieren
+== _Dateien synchronisieren_
 
 [source,bash]
 .Um eine remote git zu erstellen, geben wir nun den Befehl, mit dem dazugehörigen Link des Administrators des Projektes auf github, ein.
@@ -194,12 +194,12 @@ git remote add origin "Link von Github repository"
 ----
 
 [source,bash]
-.Im Anschluss laden wir die Dateien herunter und synchronisieren diese mit unserem System
+.Im Anschluss laden wir die Dateien herunter und synchronisieren diese mit unserem System.
 ----
 git pull origin master
 ----
 
-=== Dateien von unserem System mit github synchronisieren
+== _Dateien von unserem System mit GitHub synchronisieren_
 
 [source,bash]
 .Zuerst muss die gewünscht Datei commitet werden, dazu geben wir den Befehl ein.
@@ -207,10 +207,10 @@ git pull origin master
 git commit -m "Änderung"
 ----
 
-Nun zeigt er die gewänderte Datei unter git status an.
+Nun zeigt er die geänderte Datei unter _git status_ an.
 
 [source,bash]
-.Im Anschluss synchronisieren wir unsere Systemdaten mit github
+.Im Anschluss synchronisieren wir unsere Systemdaten mit GitHub.
 ----
 git push -u origin master
 ----
@@ -259,3 +259,4 @@ git push -u origin master
  
 
 
++++
