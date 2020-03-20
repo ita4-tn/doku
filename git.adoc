@@ -62,7 +62,7 @@ git commit -m "erste Version"
 wird.
 
 [source,bash]
-.jetzt lässt sich mit _git status_ das ganze nochmal überprüfen. Git sollte jetzt ausgeben das, dass Repository _sauber_ ist.
+.Jetzt lässt sich mit _git status_ das ganze nochmal überprüfen. Git sollte jetzt ausgeben das, dass Repository _sauber_ ist.
 ----
 git status
 On branch master
@@ -123,14 +123,16 @@ git pull
 
 == _Git Branching und Merging_
 
--> Git-Branches sind quasi Verweise auf eine Änderung, ohne diese direkt in den Master Branch zu übernehmen. So ist es weniger wahrscheinlich, dass evtl. Fehler in den Master Branch übernommen werden.
--> 
+Git-Branches sind quasi Verweise auf eine Änderung, ohne diese direkt in den Master Branch zu übernehmen. So ist es weniger wahrscheinlich, dass evtl. Fehler in den Master Branch übernommen werden.
+ 
 
 [source,bash]
 .Um alle Branches in deinem Repository aufzuführen 
 ----
 git branch
 ----
+
+-> Es lassen sich für jeden _Benutzer_ eigene Branches erstellen.
 
 [source,bash]
 .Um einen neuen Branch zu erstellen
@@ -146,41 +148,47 @@ git branch -d *NAME*
 ----
 -> wenn das -d groß geschrieben wird _-D_, wird das löschen erzwungen. Selbst wenn es noch nicht gemergte Commits gibt.
 
+-> Man befindet sich standart mäßig immer im _Master-Branch_
+
 [source,bash]
 .Um zu einem Branch zu wechseln
 ----
 git checkout *NAME*
 ----
-
 -> alle Änderungen die unter einem anderem Branch als dem Master-Branch durchgeführt wurden, sind im Repository auch nur unter dem Branch verfügbar und nicht im Master-Branch.
+
+-> Den eigenen _Branch_ auf den aktuellen Stand bringen... 
 
 [source,bash]
 .Um das lokale Repository mit den neuesten Änderungen zu aktualisieren. Zum Bsp. wenn vorher von einem anderen Gerät aus am Repository gearbeitet wurde.
 ----
 git pull origin *BRANCHNAME*
 ----
+-> der eigene _Branch_ wird mit GitHub synchronisiert
 
 [source,bash]
 .Um seine Änderungen in seinem Branch an GitHub zu übertragen
 ----
 git push origin *BRANCHNAME*
----- 
 ----
+
+-> auf GitHub ist die geänderte Version jetzt unter dem eigenen _Branch_ sichtbar
 
 
 [source,bash]
 .Um hinterher die Änderung in den Master-Branch zu übernehmen, müssen die Dateien gemergt werden. Dazu vorher in den Master-Branch wechseln.
 ----
 git merge _Name_
----- 
 ----
--> Git versucht die Änderungen automatisch zusammenzuführen. Dies ist leider nicht immer möglich und endet in _Konflikten_, die durch manuelles editieren gelöst werden können. Das muss Git aber mit _git add *DateiName* mitgeteilt werden. Danach sollte dem _mergen_ nichts mehr im Wege stehen.
+ 
+Git versucht die Änderungen automatisch zusammenzuführen. Dies ist leider nicht immer möglich und endet in _Konflikten_, die durch manuelles editieren gelöst werden können. Das muss Git aber mit _git add *DateiName* mitgeteilt werden. Danach sollte dem _mergen_ nichts mehr im Wege stehen.
 
-== _In Git Branches mit *Tags* versehen_
+== _In Git Branches mit tags versehen_
 
+-> Ein _tag_ kann nur einmal mit demselben Text vergeben werden, so ist jeder _tag_ gut zu zuordnen. 
 
 [source,bash]
-.Ein _tag_ kann nur einmal mit demselben Text vergeben werden. So ist jeder _tag_ gut zu zuordnen.
+.So lassen sich einfach, aussagekräftige _tags_ erstellen.
 ----
 git tag -m "TEXT/Vers.Nummer" *NameDesTags*
 ----
@@ -188,32 +196,5 @@ git tag -m "TEXT/Vers.Nummer" *NameDesTags*
 -> EndOfLine <-
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
- 
 
 
