@@ -19,7 +19,7 @@ git config --global user.email "email@email.de
 [source,bash]
 .Damit Git die Dateien verwalten kann, muss ein Repository für das Projekt angelegt werden
 ----
-git init "Projektname"
+git init *Projektname*
 ----
 
 -> Zunächst erstellt Git das Verzeichnis "Projektname"/, falls es noch nicht existiert. Danach initialisiert Git ein leeres Repository in diesem Verzeichnis und legt dafür ein Unterverzeichnis .git/ an, in dem
@@ -31,7 +31,7 @@ Git gar nichts.
 [source,bash]
 .in das Verzeichnis wechseln und den aktuellen Status anzeigen
 ----
-cd "Projektname"
+cd *Projektname*
 ----
 ----
 git status
@@ -45,7 +45,7 @@ git status
 [source,bash]
 .Eine Datei Git zur Verwaltung übergeben
 ----
-git add "Datei"
+git add *Datei*
 ----
 
 -> Git wird die Veränderungen — also unsere neue Datei — beim nächsten Commit übernehmen.
@@ -178,7 +178,7 @@ git push origin *BRANCHNAME*
 [source,bash]
 .Um hinterher die Änderung in den Master-Branch zu übernehmen, müssen die Dateien gemergt werden. Dazu vorher in den Master-Branch wechseln.
 ----
-git merge _Name_
+git merge *Name*
 ----
  
 Git versucht die Änderungen automatisch zusammenzuführen. Dies ist leider nicht immer möglich und endet in _Konflikten_, die durch manuelles editieren gelöst werden können. Das muss Git aber mit _git add *DateiName* mitgeteilt werden. Danach sollte dem _mergen_ nichts mehr im Wege stehen.
