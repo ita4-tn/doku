@@ -110,8 +110,8 @@ apt-get install vim
 |  I
 |  Texteingabe am Zeilenanfang (Insert)
 
-|  
-|
+|  ESC 
+|  Um Befehle eingeben zu können
 |===
 
 
