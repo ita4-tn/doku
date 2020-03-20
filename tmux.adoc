@@ -186,7 +186,7 @@ tmuxinator work
 [source,bash]
 .oder kürzer:
 ----
-mux work
+tmux work
 ----
 
 
