@@ -147,12 +147,9 @@ git push
 git pull
 ----
 
-
-
 == Projekte mit Git synchronisieren
 
-
-== _Verzeichnis erstellen, unter Git Kontrolle stellen und mit GitHub synchronisieren_
+=== _Verzeichnis erstellen, unter Git Kontrolle stellen und mit GitHub synchronisieren_
 
 
 [source,bash]
@@ -255,33 +252,26 @@ git push origin <branchname>
 git merge <branchname>
 ----
 
+== Git Tag
 
+Git Tags bieten eine einfache Möglichkeit, um bestimmte Revisionen eines Repos zu kennzeichnen. Sie können z.B. für die Kennzeichnung einer neuen Release-Version benutzt werden. Dadurch wird ein wichtiger Punkt der Entwicklung permanent markiert und ist einfach wieder zu erkennen.
 
+== Tags erstellen:
 
+Ein neuer Tag kann mit dem Kommando "git tag" erstellt werden. Es werden zwei Arten von Tags unterschieden:
 
+* Annotated Tags: Diese Tags resultieren immer in einem eigenen Commit und bringen Informationen wie Tagger, Email, Datum oder Signatur mit.
 
+[source,bash]
+.Command.
+----
+git tag -a -m "Beschreibung"
+----
 
+* Lightweight Tags: Diese Art von Tags sind eine simple Referenz auf einen Commit (der Hash-Wert wird als Tag referenziert). Extra-Information  werden zu diesen Tags nicht hinzugefügt.
 
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
- 
-
-
+[source,bash]
+.Command.
+----
+git tag <versionsname>-lw
+----
