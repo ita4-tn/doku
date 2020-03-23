@@ -1,0 +1,34 @@
+=Python
+
+== Installation
+
+----
+https://www.jetbrains.com/de-de/pycharm/download/#section=linux
+----
+
+die community version Herunteladen
+
+Entpacken (am besten in die heimat verzeichnes)
+
+offne den verzeichnes mit
+
+[source,bash]
+
+----
+cd pycharm-community-2019.3.4/bin
+----
+
+[source,bash]
+
+command ausführen
+
+----
+pycharm.sh
+----
+
+* unten rechts unter configure kann man eine desktop icon erstellen unter:
+
+----
+Creat desktop entry
+----
+
