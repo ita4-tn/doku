@@ -106,3 +106,5 @@ ls -la /home/Benutzer
 
 -> Die Ausgabe findet ausschliesslich in textbasiert statt.
 
+...
+
