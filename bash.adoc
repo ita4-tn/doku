@@ -1,6 +1,6 @@
 = Bash
 
-== Einfuehrung fuer die Bash
+== Einfuehrung in das Tutorial
 
 Laut Wikipedia:
 Bash (auch BASH oder bash), die Bourne-again shell, ist eine freie Unix-Shell unter GPL.
