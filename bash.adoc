@@ -10,34 +10,56 @@ Als Shell ist Bash eine Mensch-Maschine-Schnittstelle, die eine Umgebung (englis
 Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, miteinander zu kombinieren und sie spielen eine zentrale Rolle im Alltag der Systemadministration.
 
 
+<<<<<<< HEAD
 
 == Installation/Setup
 
+=======
+== Installation/Setup
+>>>>>>> 067566a4c6812fe4f65d45bcbbeee2bd8ec08ca5
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
 es wird keine Installation benötigt.
 
 == Vorbereitung
+<<<<<<< HEAD
 
 Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
 
 == Anwendung
 Man nutzt die Shell für die Ausführung von Befehlen.
+=======
+Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
+
+== Anwendung
+Man nutzt die Shell für die Ausführung von Befehlen. +
+>>>>>>> 067566a4c6812fe4f65d45bcbbeee2bd8ec08ca5
 Innerhalb der Shell kann man sich über Befehle in den Verzeichnissen bewegen.
 
 
+<<<<<<< HEAD
 Für die Bash wird keine weitere Vorbereitung benötigt, da es eine vorinstallierte Anwendung ist.
 
 == Anwendung
 Man nutz die shell für ausführungen von Befehlen direkt aus der Shell heraus
 innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
+=======
+== Anwendung
+Man nutz die shell für ausführungen von Befehlen direkt aus der Shell heraus
+innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen. +
+>>>>>>> 067566a4c6812fe4f65d45bcbbeee2bd8ec08ca5
 
 [source,bash]
 .Um innerhalb eines Verzeichnis ein neues Verzeichnis zu erstellen benötigt man den Befehl:
 ----
 mkdir *Verzeichnisname)*
 ----
+<<<<<<< HEAD
 
 -> Der Befehl bedeutet 'make directory' also ein Verzeichnis erstellen.
+=======
+ Der Befehl bedeutet 'make directory' also ein Verzeichnis erstellen.
+=======
+>>>>>>> 067566a4c6812fe4f65d45bcbbeee2bd8ec08ca5
 -> der Befehl bedeutet _make directory_ also _ein Verzeichnis erstellen_.
 Benutzen wir diesen Befehl aus dem Grundverzeichnis heraus _/home/benutzer_ wird dort ein Ordner angelegt.
  
@@ -56,6 +78,10 @@ wechselt man aus dem aktuellen Verzeichnis zu einem Ziel Verzeichnis.
 cd (Ordnername)
 ----
 -> In diesem befehl __cd__ stecken die worte 'change' und 'directory'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 067566a4c6812fe4f65d45bcbbeee2bd8ec08ca5
 
 [source,bash]
 .Beispiel: befinden wir uns im Grundverzeichnis: /home/Benutzer/ können wir mit dem Befehl

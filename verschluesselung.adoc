@@ -1,6 +1,6 @@
 = Verschlüsselung
 
-== _Anforderungen an eine sichere Kommunikation_
+== Anforderungen an eine sichere Kommunikation
 
 ** Authenticity (Authenzität) 
 *** Sender der Nachricht ist eindeutig identifizierbar
@@ -15,7 +15,7 @@
 *** Die Urheberschaft einer Nachricht kann nicht abgestritten werden 
 
 
-== _Symetrische Verschlüsselung_
+== Symetrische Verschlüsselung
 
 Symmetrische Verschlüsselung. Bei symmetrischen Verschlüsselungsverfahren gibt es im Gegensatz zu den asymmetrischen Verfahren, nur einen einzigen Schlüssel. Dieser Schlüssel ist für die Verschlüsselung, als auch für die Entschlüsselung zuständig.
 
@@ -27,7 +27,7 @@ Symmetrische Verschlüsselung. Bei symmetrischen Verschlüsselungsverfahren gibt
 
 image::./img/symverschl.png[Grafik,300,150,align="center"]
 
-== _Asymetrische Verschlüsselung_
+== Asymetrische Verschlüsselung
 
 Asymetrische Verschlüsselung. Beim asymetrischen Verschlüsselungsverfahren gibt es zwei Arten von Schlüsseln. Einen privaten Schlüssel und einen öffentlichen Schlüssel. Ein Schlüssel wird für die Verschlüsselung und ein Schlüssel wird für die Entschlüsselung verwendet.
 
@@ -40,13 +40,13 @@ Asymetrische Verschlüsselung. Beim asymetrischen Verschlüsselungsverfahren gib
 
 image::./img/schlüssel1.png[Grafik2,300,150,align="center"]
 
-== _Digitales Zertifikat_
+== Digitales Zertifikat
 
 Ein digitales Zertifikat ist ein digitaler Datensatz, meist nach Standards der ITU-T oder der IETF, der bestimmte Eigenschaften von Personen oder Objekten bestätigt und dessen Authentizität und Integrität durch kryptografische Verfahren geprüft werden kann. Das digitale Zertifikat enthält insbesondere die zu seiner Prüfung erforderlichen Daten. Die Ausstellung des Zertifikats erfolgt durch eine offizielle Zertifizierungsstelle, die Certification Authority (CA). 
 
 image::./img/schlüsselsignatur.png[Grafik3,300,150,align="center"]
 
-== _Schlüssel erzeugen nach Diffie Hellmann_
+== Schlüssel erzeugen nach Diffie Hellmann
 
 ** gemeinsame, öffentliche, möglichstgroße Primzahl (p)
 
@@ -63,7 +63,7 @@ Alice rechnet _A=B^a mod p, Bob rechnet _B=A^b mod p
 
 ** Beide erhalten jetzt die gleiche nur Ihnen bekannte geheime Zahl
 
-== _Beispiel Rechnung nach Diffie-Hellmann_
+== Beispiel Rechnung nach Diffie-Hellmann
 
 ** Primzahl p = 13
 ** Zufallszahl z = 3
@@ -78,7 +78,7 @@ Alice rechnet _A=B^a mod p, Bob rechnet _B=A^b mod p
 
 
 
-== _Schlüssel unter Linux erzeugen_
+== Schlüssel unter Linux erzeugen
 
 [source,bash]
 .Befehl um ein RSA2048 ssh Schlüsselpaar zu erzeugen
