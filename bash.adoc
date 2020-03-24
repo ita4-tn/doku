@@ -73,15 +73,13 @@ cd *Verzeichnisname*
 wechselt man aus dem aktuellen Verzeichnis zu einem Ziel Verzeichnis.
 
 ->In dem Befehl __cd__ stecken die Worte 'change' und 'directory'
-.gibt man den Befehl ein
-----
-cd (Ordnername)
-----
--> In diesem befehl __cd__ stecken die worte 'change' und 'directory'
-<<<<<<< HEAD
-=======
 
->>>>>>> 067566a4c6812fe4f65d45bcbbeee2bd8ec08ca5
+
+
+
+
+
+
 
 [source,bash]
 .Beispiel: befinden wir uns im Grundverzeichnis: /home/Benutzer/ können wir mit dem Befehl
