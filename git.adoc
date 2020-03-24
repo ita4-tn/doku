@@ -2,7 +2,7 @@
 
 
 
-== _Autor und E-Mail Adresse hinzufügen_
+== Autor und E-Mail Adresse hinzufügen
 
 [source,bash]
 .Namen und E-Mail Adresse hinzufügen, damit Git einen Commit einem Autor zuordnen kann
@@ -14,8 +14,7 @@ git config --global user.email "email@email.de
 ----
 
 
-== _Ein Repository anlegen_
-
+== Ein Repository anlegen_
 [source,bash]
 .Damit Git die Dateien verwalten kann, muss ein Repository für das Projekt angelegt werden
 ----
@@ -27,7 +26,7 @@ interne Daten verwaltet werden. Sollte das Verzeichnis beispiel/ bereits existie
 darin ein neues Repository. Gibt es bereits sowohl das Verzeichnis wie auch ein Repository, macht
 Git gar nichts.
 
-== _Den aktuellen Status anzeigen_
+== Den aktuellen Status anzeigen
 [source,bash]
 .in das Verzeichnis wechseln und den aktuellen Status anzeigen
 ----
@@ -40,7 +39,7 @@ git status
 -> Git gibt einen Hinweis aus, das man vor dem ersten Commit steht, Git aber nichts gefunden hat.
 -> Git liefert noch einen Hinweis welche Schritte sich als nächstes anbieten
 
-== _Erster Commit_
+== Erster Commit
 
 [source,bash]
 .Eine Datei Git zur Verwaltung übergeben
@@ -70,7 +69,7 @@ nothing to commit, working directory clean
 ----
 
 
-== _Vergleichen von Revisionen_
+== Vergleichen von Revisionen
 
 [source,bash]
 .Mit den Dateien des "working trees" bzw. des Index vergleichen
@@ -121,7 +120,7 @@ git push
 git pull
 ----
 
-== _Git Branching und Merging_
+== Git Branching und Merging
 
 Git-Branches sind quasi Verweise auf eine Änderung, ohne diese direkt in den Master Branch zu übernehmen. So ist es weniger wahrscheinlich, dass evtl. Fehler in den Master Branch übernommen werden.
  
@@ -183,7 +182,7 @@ git merge *Name*
  
 Git versucht die Änderungen automatisch zusammenzuführen. Dies ist leider nicht immer möglich und endet in _Konflikten_, die durch manuelles editieren gelöst werden können. Das muss Git aber mit _git add *DateiName* mitgeteilt werden. Danach sollte dem _mergen_ nichts mehr im Wege stehen.
 
-== _In Git Branches mit tags versehen_
+== In Git Branches mit tags versehen
 
 -> Ein _tag_ kann nur einmal mit demselben Text vergeben werden, so ist jeder _tag_ gut zu zuordnen. 
 
