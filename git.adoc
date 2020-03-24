@@ -14,7 +14,7 @@ git config --global user.email "email@email.de
 ----
 
 
-== Ein Repository anlegen_
+== Ein Repository anlegen
 [source,bash]
 .Damit Git die Dateien verwalten kann, muss ein Repository für das Projekt angelegt werden
 ----
@@ -90,7 +90,7 @@ git diff [rev1]..[rev2] -- src/  # Unterschiede in src/ zwischen rev1 und rev2
 ----
 
 
-== _Anzeigen der Commit-Historie_
+== Anzeigen der Commit-Historie
 
 [source,bash]
 .Nachdem mehrere Commits erstellt wurden, kann man bei Bedarf zurück schauen und sehen was alles passiert ist mit
