@@ -1,81 +1,75 @@
 = Bash
 
-== _Einfuehrung_
+== Einfuehrung
 
 Laut Wikipedia:
-Bash (auch BASH oder bash), die Bourne-again shell, ist eine freie Unix-Shell unter GPL. +
+Bash (auch BASH oder bash), die Bourne-again shell, ist eine freie Unix-Shell unter GPL.
 
 Als Shell ist Bash eine Mensch-Maschine-Schnittstelle, die eine Umgebung (englisch environment) bereitstellt, in der zeilenweise Texteingaben und -ausgaben möglich sind. Letzteres erfolgt über die Befehlszeile, in die Befehle eingetippt und durch betätigen der Eingabetaste eingegeben werden. 
 
 Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, miteinander zu kombinieren und sie spielen eine zentrale Rolle im Alltag der Systemadministration.
 
 
-<<<<<<< HEAD
-== _Installation/Setup_
-=======
-== _Installation/Setup_ +
->>>>>>> dn
+
+== Installation/Setup
+
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
 es wird keine Installation benötigt.
 
-== _Vorbereitung_
-<<<<<<< HEAD
+== Vorbereitung
+
 Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
 
-== _Anwendung_
-Man nutzt die Shell für die Ausführung von Befehlen. +
+== Anwendung
+Man nutzt die Shell für die Ausführung von Befehlen.
 Innerhalb der Shell kann man sich über Befehle in den Verzeichnissen bewegen.
 
-=======
-Für die Bash wird keine weitere Vorbereitung benötigt, da es eine vorinstallierte Anwendung ist. +
 
-== _Anwendung_
+Für die Bash wird keine weitere Vorbereitung benötigt, da es eine vorinstallierte Anwendung ist.
+
+== Anwendung
 Man nutz die shell für ausführungen von Befehlen direkt aus der Shell heraus
-innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen. +
->>>>>>> dn
+innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
+
 [source,bash]
 .Um innerhalb eines Verzeichnis ein neues Verzeichnis zu erstellen benötigt man den Befehl:
 ----
 mkdir *Verzeichnisname)*
 ----
-<<<<<<< HEAD
+
 -> Der Befehl bedeutet 'make directory' also ein Verzeichnis erstellen.
-=======
 -> der Befehl bedeutet _make directory_ also _ein Verzeichnis erstellen_.
 Benutzen wir diesen Befehl aus dem Grundverzeichnis heraus _/home/benutzer_ wird dort ein Ordner angelegt.
->>>>>>> dn
  
  
 -> Um jetzt in den angelegten Ordner zu wechseln
 [source,bash]
-<<<<<<< HEAD
 .Mit dem Befehl:
 ----
 cd *Verzeichnisname*
 ----
-wechselt man aus dem aktuellen Verzeichnis zu einem Ziel Verzeichnis. +
+wechselt man aus dem aktuellen Verzeichnis zu einem Ziel Verzeichnis.
+
 ->In dem Befehl __cd__ stecken die Worte 'change' und 'directory'
-=======
 .gibt man den Befehl ein
 ----
 cd (Ordnername)
 ----
 -> In diesem befehl __cd__ stecken die worte 'change' und 'directory'
->>>>>>> dn
 
 [source,bash]
 .Beispiel: befinden wir uns im Grundverzeichnis: /home/Benutzer/ können wir mit dem Befehl
 ----
 cd /home/benutzer/XYZ
 ----
-unser aktuellen Standort auf das Verzeichnis _XYZ_ wechseln. +
+unser aktuellen Standort auf das Verzeichnis _XYZ_ wechseln.
 
 [source,bash]
 .Um herauszufinden in welchem Verzeichnis wir uns befinden, den Befehl _'Public Works Department'_
 ----
 pwd
 ----
-eingegeben und uns wird angezeigt in welchem Verzeichnis wir sind. +
+eingegeben und uns wird angezeigt in welchem Verzeichnis wir sind.
 
 
 [source,bash]
@@ -94,11 +88,11 @@ ls -la /home/Benutzer
 ----
 
 
-== _Formatierung_
+== Formatierung
 
 -> Es handelt sich um eine Shell, sodass eine Formatierung nicht vorhanden ist.
 
-== _Ausgabe_
+== Ausgabe
 
 -> Die Ausgabe findet ausschliesslich in textbasiert statt.
 
