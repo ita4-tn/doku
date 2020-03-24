@@ -1,4 +1,4 @@
-=Python
+= Python
 
 == Installation
 
@@ -6,11 +6,11 @@
 https://www.jetbrains.com/de-de/pycharm/download/#section=linux
 ----
 
-die community version Herunteladen
+1- die community version Herunteladen
 
-Entpacken (am besten in die heimat verzeichnes)
+2- Entpacken (am besten in die heimat verzeichnes)
 
-offne den verzeichnes mit
+3- öffne den verzeichnes mit
 
 [source,bash]
 
@@ -20,7 +20,7 @@ cd pycharm-community-2019.3.4/bin
 
 [source,bash]
 
-command ausführen
+.Command ausführen.
 
 ----
 pycharm.sh
@@ -32,3 +32,10 @@ pycharm.sh
 Creat desktop entry
 ----
 
+4- Aktuelle veriosion von python Installieren,werd mit denn command
+
+[source,bash]
+
+----
+
+----
