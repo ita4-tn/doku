@@ -1,27 +1,10 @@
-== TMUX
+= TMUX
 
 
 -> _der Terminal Multiplexer_
 
 
-:encoding: utf-8
-:lang: de
-:keywords: tmux, documentation
-:revision: 0.1.0
-:copyright: dn
-:author: dom neu
-:date: 11.03.2020
-:toc: 
-:toc-title: Inhaltsverzeichnis
-
-
-
-Version: {revision} +
-Datum: {date} +
-Author: {author}
-// vim set: syntax=asciidoc
-
-==== Vorbereitung 
+== Vorbereitung 
 
 [source,bash]
 .-tmux installieren
@@ -29,7 +12,7 @@ Author: {author}
 sudo apt install tmux
 ----
 
-==== tmux starten
+== Tmux starten
 
 [source,bash]
 .-neue tmux Session starten
@@ -61,7 +44,7 @@ tmux ls
 tmux kill-session
 ----
 
-==== Fenster (Tabs)
+== Fenster (Tabs)
 -> druecken des Präfixes STRG+b und dann:
 
 [width="60%",cols="<50,<30",options="header"]
@@ -86,7 +69,7 @@ tmux kill-session
 
 |===
 
-==== Tabs <splits> 
+== Tabs <splits> 
 -> druecken des Präfixes STRG+b und dann:
 
 
@@ -112,7 +95,7 @@ tmux kill-session
 
 |=== 
 
-==== Sonstiges
+== Sonstiges
 -> druecken des Präfixes STRG+b und dann:
 
 
@@ -133,7 +116,7 @@ tmux kill-session
 |===
 
 
-==== Templates fuer neue tmux Sessions erstellen mit _tmuxinator_
+== Templates fuer neue tmux Sessions erstellen mit _tmuxinator_
 ->tmuxinator ist ein add-on mit dem Templates fuer neue Sessions erstellt werden koennen
 
 [source,bash]
@@ -186,7 +169,7 @@ tmuxinator work
 [source,bash]
 .oder kürzer:
 ----
-mux work
+tmux work
 ----
 
 
