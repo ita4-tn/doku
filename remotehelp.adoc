@@ -1,0 +1,25 @@
+== Remotehelp
+
+[source,bash]
+.Falls auf dem System kein ssh installiert ist, kann man es mit folgendem Befehl installieren
+
+----
+sudo apt-get install ssh
+----
+
+[source,bash]
+.Zunächst muss ein neuer Benutzer angelegt werden. 
+
+----
+useradd -s /bin/bash -md /home/rmthlp -G sudo -p '$6$/z8.rV/8k3aqXVFR$/MoaT7EXd0iM2c2AexfnVlwrpAoWgv5nkUu.eelf1ZRoKXJ37i.gvHP6ftlWtQ3/r6Bd3j10O/MBoEW3H9/QJ.' rmthlp
+----
+
+
+[source,bash]
+.Damit eine sichere ssh Verbindung erstellt werden kann, muss auf dem eigenen System ein ssh Tunnel geöffnet werden. Dafür wird folgender Befehl benötigt
+
+----
+ssh -gNR 127.0.0.1:2202:127.0.0.1:22 <name>@host
+----
+
+
