@@ -109,15 +109,15 @@ git clone *Link von GitHub.com einfügen*
 ----
 
 [source,bash]
-.Ein Repository vom PC auf GitHub.com _uploaden_
+.Ein Repository vom GitHub.com auf PC _Downloaden_
 ----
-git push
+git pull 
 ----
 
 [source,bash]
 .Ein Repository vom PC auf GitHub.com _uploaden_
 ----
-git push
+git push origin 
 ----
 
 == Projekte mit Git synchronisieren
@@ -209,5 +209,3 @@ git tag -a -m "Beschreibung"
 ----
 git tag <versionsname>-lw
 ----
-=======
->>>>>>> 815d10fe6cff8f66029f84d9ea7a66ed3e969b7a
