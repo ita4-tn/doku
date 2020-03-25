@@ -60,12 +60,12 @@ cd *Verzeichnisname*
 ----
 wechselt man aus dem aktuellen Verzeichnis zu einem Ziel Verzeichnis.
 
-->In dem Befehl __cd__ stecken die Worte 'change' und 'directory'
+->In dem Befehl _cd_ stecken die Worte 'change' und 'directory'
 .gibt man den Befehl ein
 ----
 cd (Ordnername)
 ----
--> In diesem befehl __cd__ stecken die worte 'change' und 'directory'
+-> In diesem befehl _cd_ stecken die worte 'change' und 'directory'
 
 [source,bash]
 .Beispiel: befinden wir uns im Grundverzeichnis: /home/Benutzer/ können wir mit dem Befehl
@@ -87,12 +87,13 @@ eingegeben und uns wird angezeigt in welchem Verzeichnis wir sind.
 ----
 ls -la
 ----
-anzeigen. _ls_ steht hier für 'listing' also auflisten,
-die Option _-la_ steht hier für 'long all', also eine lange, ausführliche Liste.
+anzeigen. _ls_ steht hier für _listing_ also auflisten,
+die Option _-la_ steht hier für _long all_, also eine lange, ausführliche Liste.
 
 
 [source,bash]
 .Die Auflistung in langer Ausführung zB im _Home_ Verzeichnis bekommt man mit
+
 ----
 ls -la /home/Benutzer
 ----
@@ -105,6 +106,4 @@ ls -la /home/Benutzer
 == Ausgabe
 
 -> Die Ausgabe findet ausschliesslich in textbasiert statt.
-
-...
 
