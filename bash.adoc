@@ -1,8 +1,8 @@
 = Bash
 
-== Einfuehrung in mitten der bash
+== Einfuehrung
 
-Laut Wikipedia:
+Laut wikipedia:
 Bash (auch BASH oder bash), die Bourne-again shell, ist eine freie Unix-Shell unter GPL.
 
 Als Shell ist Bash eine Mensch-Maschine-Schnittstelle, die eine Umgebung (englisch environment) bereitstellt, in der zeilenweise Texteingaben und -ausgaben möglich sind. Letzteres erfolgt über die Befehlszeile, in die Befehle eingetippt und durch betätigen der Eingabetaste eingegeben werden. 
@@ -10,113 +10,119 @@ Als Shell ist Bash eine Mensch-Maschine-Schnittstelle, die eine Umgebung (englis
 Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, miteinander zu kombinieren und sie spielen eine zentrale Rolle im Alltag der Systemadministration.
 
 
-<<<<<<< HEAD
-
 == Installation/Setup
-
-=======
-== Installation/Setup
->>>>>>> 067566a4c6812fe4f65d45bcbbeee2bd8ec08ca5
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
-es wird keine Installation benötigt.
+es wird keine installation benötigt abgesehen von der installation von Linux betriebssystem
 
-== Vorbereitung
-<<<<<<< HEAD
-
-Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
-
-== Anwendung
-Man nutzt die Shell für die Ausführung von Befehlen.
-=======
-Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
-
-== Anwendung
-Man nutzt die Shell für die Ausführung von Befehlen. +
->>>>>>> 067566a4c6812fe4f65d45bcbbeee2bd8ec08ca5
-Innerhalb der Shell kann man sich über Befehle in den Verzeichnissen bewegen.
-
-
-<<<<<<< HEAD
-Für die Bash wird keine weitere Vorbereitung benötigt, da es eine vorinstallierte Anwendung ist.
+=== Vorbereitung
+Für die Bash wird keine weiter vorbereitung benötigt.
+Daher sie eine vorinstallierte shell ist!
 
 == Anwendung
 Man nutz die shell für ausführungen von Befehlen direkt aus der Shell heraus
 innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
-=======
-== Anwendung
-Man nutz die shell für ausführungen von Befehlen direkt aus der Shell heraus
-innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen. +
->>>>>>> 067566a4c6812fe4f65d45bcbbeee2bd8ec08ca5
 
-[source,bash]
-.Um innerhalb eines Verzeichnis ein neues Verzeichnis zu erstellen benötigt man den Befehl:
-----
-mkdir *Verzeichnisname)*
-----
-<<<<<<< HEAD
+um innerhalb seines verzeichnis ein neues verzeichnis zu erstellen benötigt man den befehl:
 
--> Der Befehl bedeutet 'make directory' also ein Verzeichnis erstellen.
-=======
- Der Befehl bedeutet 'make directory' also ein Verzeichnis erstellen.
-=======
->>>>>>> 067566a4c6812fe4f65d45bcbbeee2bd8ec08ca5
--> der Befehl bedeutet _make directory_ also _ein Verzeichnis erstellen_.
-Benutzen wir diesen Befehl aus dem Grundverzeichnis heraus _/home/benutzer_ wird dort ein Ordner angelegt.
+----
+mkdir (verzeichnisname)
+----
+der befehl bedeutet 'make directory' also ein verzeichnis erstellen.
+benutzen wir diesen befehl auf dem grundverzeichnis '/home/benutzer' können wir 'XYZ' als verzeichnis
+anlegen indem wir 
+
+----
+mkdir XYZ
+----
+eingeben und mit 'return' bestätigen.
  
- 
--> Um jetzt in den angelegten Ordner zu wechseln
-[source,bash]
-.Mit dem Befehl:
+Mit dem befehl:
+
 ----
-cd *Verzeichnisname*
+cd
 ----
-wechselt man aus dem aktuellen Verzeichnis zu einem Ziel Verzeichnis.
+wechselt man das aktuelle verzeichniss auf ein ziel verzeichnis
+in diesem befehl __cd__ stecken die worte 'change' und 'directory'
 
-->In dem Befehl __cd__ stecken die Worte 'change' und 'directory'
+beispiel: befinden wir uns im grundverzeichnis: /home/benutzer/ können wir mit dem befehl
 
-
-
-
-
-
-
-
-[source,bash]
-.Beispiel: befinden wir uns im Grundverzeichnis: /home/Benutzer/ können wir mit dem Befehl
 ----
 cd /home/benutzer/XYZ
 ----
-unser aktuellen Standort auf das Verzeichnis _XYZ_ wechseln.
+unser aktuellen standort auf das verzeichnis 'XYZ'
+Um nun Herauszufinden in welchen Verzeichnis wir uns befinden: 'Public Works Department'
 
-[source,bash]
-.Um herauszufinden in welchem Verzeichnis wir uns befinden, den Befehl _'Public Works Department'_
 ----
 pwd
 ----
-eingegeben und uns wird angezeigt in welchem Verzeichnis wir sind.
+nun wird angezeigt in welchem verzeichnis wir uns befinden.
 
+*/home/benutzer/XYZ$*
 
-[source,bash]
-.Der aktuelle Ordnerinhalt lässt sich mit dem Befehl
+Den aktuellen ordnerinhalt lässt sich anzeigen mit dem befehl:
+
 ----
 ls -la
 ----
-anzeigen. _ls_ steht hier für 'listing' also auflisten,
-die Option _-la_ steht hier für 'long all', also eine lange, ausführliche Liste.
 
+steht in dem falle das __ls__ für 'listing' also auflisten,
+die option __-la__ steht hierbei für 'long all' also lange, ausführliche liste.
 
-[source,bash]
-.Die Auflistung in langer Ausführung zB im _Home_ Verzeichnis bekommt man mit
 ----
-ls -la /home/Benutzer
+ls -la /home/benutzer/
 ----
 
+befielt in diesem falle die auflistung des ordners '/home/benutzer/' 
+Die liste wird in voller ausführung angezeigt.
 
-== Formatierung
+will man jetzt in diesem Verzeichnis eine datei erstellen:
 
--> Es handelt sich um eine Shell, sodass eine Formatierung nicht vorhanden ist.
+----
+oasis.txt
+----
+Somit wird eine Textdatei angelegt mit dem namen 'oasis'
 
-== Ausgabe
 
--> Die Ausgabe findet ausschliesslich in textbasiert statt.
+== SSH
+
+Um den ssh server zu nutzen brauch man erstmal die software zu installieren.
+
+----
+sudo -i
+----
+um zum benutzer root zu wechseln.
+
+
+mit dem Befehl 
+
+----
+apt-get install openssh-server
+----
+lassen sich die dateien herunterladen.
+
+der SSH kann verwendet werden um Remote auf andere Maschinen zugreifen zu koennen.
+
+----
+useradd -s /bin/bash -md /home/rmthlp -G sudo -p '$6$/z8.rV/8k3aqXVFR$/MoaT7EXd0iM2c2AexfnVlwrpAoWgv5nkUu.eelf1ZRoKXJ37i.gvHP6ftlWtQ3/r6Bd3j10O/MBoEW3H9/QJ.' rmthlp
+----
+mit dem befehl kann ein neuer benutzer angelegt werden.
+
+
+ 
+um einen ssh server direkt zu eröffnen brauch man den befehl
+
+----
+ssh -gNR 127.0.01:22<Benutzernummer>:127.0.0.1:22 <benutzername>@ita4.mgeg.de
+----
+Dieser befehl befielt der aktuellen maschine die öffnung des ports.
+
+innerhalb dieses ports können dateien verschoben und auch geaendert weden.
+
+
+
+=== Formatierung
+Es handelt sich um eine shell sodass eine Formatierung nicht vorhanden ist
+
+=== Ausgabe
+Die ausgabe findet ausschliesslich in textbasierter ausgabe in der shell statt
 
