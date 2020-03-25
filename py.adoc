@@ -37,5 +37,5 @@ Creat desktop entry
 [source,bash]
 
 ----
-
+apt-get install python3
 ----
