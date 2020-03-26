@@ -150,9 +150,15 @@ der neue Branch wird jedoch nicht _ausgecheckt_
 ----
 git branch -d *NAME*
 ----
+<<<<<<< HEAD
 wenn das -d groß geschrieben wird _-D_, wird das löschen erzwungen. Selbst wenn es noch nicht gemergte Commits gibt.
 
 Man befindet sich standart mäßig immer im _Master-Branch_
+=======
+-> mit groß geschriebenem_-D_, wird das löschen erzwungen. Selbst wenn es noch nicht gemergte Commits gibt.
+
+-> standardmäßig befindet man sich immer im  _Master-Branch_
+>>>>>>> c010c5b378f4057f00d66b1b964d2185cd2e01a8
 
 [source,bash]
 .Um zu einem Branch zu wechseln
