@@ -4,8 +4,7 @@ PyCharm ist eine integrierte Entwicklungsumgebung (IDE) für die Programmierspra
 
 == Installation
 
-Um Pycharm zu installieren kann man sich entweder auf der Internetseite die passende Version herunterladen. Den Downloadlink findet man unter folgendem Link
-=======
+
 Um Pycharm zu installieren kann man sich entweder auf der Internetseite, den die passende Version herunterladen. Den Download findet man unter folgendem Link:
 
 
@@ -28,7 +27,7 @@ cd pycharm-community-2019.3.4/bin
 
 [source,bash]
 .Im Anschluss öffnet man das Programm um es zu installieren.
-
+.im Anschluss fürht man das command zu instalieren.
 ----
 pycharm.sh
 ----
