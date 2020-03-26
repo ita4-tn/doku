@@ -152,9 +152,9 @@ git branch *NAME*
 ----
 git branch -d *NAME*
 ----
--> wenn das -d groß geschrieben wird _-D_, wird das löschen erzwungen. Selbst wenn es noch nicht gemergte Commits gibt.
+-> mit groß geschriebenem_-D_, wird das löschen erzwungen. Selbst wenn es noch nicht gemergte Commits gibt.
 
--> Man befindet sich standart mäßig immer im _Master-Branch_
+-> standardmäßig befindet man sich immer im  _Master-Branch_
 
 [source,bash]
 .Um zu einem Branch zu wechseln
@@ -200,6 +200,7 @@ Git versucht die Änderungen automatisch zusammenzuführen. Dies ist leider nich
 git tag -m "TEXT/Vers.Nummer" *NameDesTags*
 ----
 
+<<<<<<< HEAD
 -> EndOfLine <-
 =======
 === Git Branch
@@ -246,6 +247,11 @@ git merge <branchname>
 <<<<<<< HEAD
 =======
 == Git Tag
+=======
+<DOMNMN>
+
+
+>>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
 
 Git Tags bieten eine einfache Möglichkeit, um bestimmte Revisionen eines Repos zu kennzeichnen. Sie können z.B. für die Kennzeichnung einer neuen Release-Version benutzt werden. Dadurch wird ein wichtiger Punkt der Entwicklung permanent markiert und ist einfach wieder zu erkennen.
 

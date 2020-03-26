@@ -1,47 +1,117 @@
-== Was ist Asciidoc
+= Asciidoc
 
-AsciiDoc ist eine vereinfachte Auszeichnungssprache, die dazu dient, Texte in verschiedenen Doku
-mentenformaten zu veröffentlichen.
-zum beispiel: HTML,pdf,Epub.
+:encoding: utf-8
+:lang: de
+:keywords: ascii, asciidoc, 
+:revision: 0.0.1
+:revnumber:
+:revdate: 
+:revremark: 
+:copyright: me me and only me
+:author: fs
+:email: fs@example.com
+:toc:
+:toc-title: asciidoc
+ 
+Copyright: {copyright} +
+Author: {author} +
+eMail: {email} +
+Version: {revision} +
+// vim set: syntax=asciidoc
+ 
+toc::[]
+
+
+
+== Was ist Asciidoc
+AsciiDoc ist eine vereinfachte Auszeichnungssprache, die dazu dient, Texte in verschiedenen Dokumentenformaten zu veröffentlichen. Zum beispiel: HTML,pdf,Epub.
 
 == Wie installiere ich Asciidoc
 
+[source,bash]
+.Zu allererst muss ich mich meinen Benutzer als Root ändern
+----
+sudo -iu root
+----
+
+[source,bash]
+.und kann danach asciidoc installieren
+----
  apt-get install asciidoc
+----
+
+Asciidoctor erzeugt seine dateien im *.adoc* Format. Dieses Format eignet sich hervorragend um damit Man-Pages oder auch HTML-Dateien zu erstellen.
 
 
+== Verschiedene Überschriften
 
-Asciidoctor erzeugt seine dateien im *.adoc* Format
-dieses Format eignet sich hervorragend um damit man-pages oder auch HTML dateien besispielsweise damit zu erstellen.
+Um verschiedene Überschriften zu erstellen, damit man im Text eine Struktur der Form bekommt, kann man mit unterschiedlichen Anzahlen des Zeichens *=* arbeiten. So wird die Hauptüberschrift mit einem einzelnen *=* gekennzeichnet und alle darauffolgenden Unterüberschriften um jeweils ein *=* ergänzt
 
+= Hauptüberschrift des Textes
 
-=== um Titel zu identifizeren
+----
+= Hauptüberschrift des Textes
+----
 
-# = Dokument Title
+== Überschrift H1
 
-# == Heading H1
+----
+== Überschrift H1
+----
 
-# === Heading H2
+=== Überschrift H2
 
-# ==== Heading h3
+----
+=== Überschrift H2
+----
+
+==== Überschrift H3
+
+----
+==== Überschrift H3
+----
+
 
 
 
 == Schriftarten
 
-*This is bold text*
+[source,bash]
+.Schriftarten können ganz einfach mit Sonderzeichen geändert werden.
 
-_This is cursiv text_
+----
+*Text fettgedruckt*
+----
 
-`This is mono text`
+----
+_Text kursiv_
+----
 
-== Source CodecDarestellen:
+----
+`Text mono`
+----
+
+== Beschreibungen und Anmerkungen
 
 [source,bash]
+.Für Beschreibungen, z.B. eines Befehles nutzt man den Ausdruck *[source,bash]* :
 
-=== Tabellen beispiel
+----
+[source,bash]
+.
+----
 
-==== Personen
+Dabei ist zu beachten, dass die Beschreibungen direkt nach dem *.* in der zweiten Zeile schreibt
 
+
+=== Tabellen
+
+==== Als Beispiel Personen
+
+[source,bash]
+.Für Tabellen nutzt man entweder den unten stehenden Befehl, oder man kopiert einfach die Tabelle aus http://asciiflow.com/
+
+----
 [width="60%",cols="<50,<30,>20",options="header,footer"]
 |===
 |Name
@@ -57,21 +127,35 @@ i|Peter
 |38
 
 |===
+----
 
-=== 
+[source,bash]
+.In der Ausgabe erscheint dann :
 
-Man sieht im oberen Abschnitt die einzelnen Bearbeitungsmöglichkeiten um seine .adoc datei zu gestalten.
+[width="60%",cols="<50,<30,>20",options="header,footer"]
+|===
+|Name
+|Geburtsdatum
+|Schugroesse
 
-Ebenfalls wird fast bei allen Systemen im asciidoc auch eine farbliches Highlighten aktiviert.
-Dies zeigt beispielsweise an, welcher Befehl ausgeführt wird oder um welche art der Überschrift es sich handelt.
+|Peter
+|20.02.1980
+|45
+ 
+|Ute
+|01.05.1976
+|38
+ 
+|===
 
-Highlighting ist in diesem falle sinnvoll um besser nachvollziehen zu können was sich in der Befehlszeile befindet.
+Durch Verändern der Zahlenwerte in den []-Klammern können als Beispiel Breite und Höhe der Tabelle angepasst werden.Man sieht im oberen Abschnitt die einzelnen Bearbeitungsmöglichkeiten um seine .adoc datei zu gestalten. Ebenfalls wird fast bei allen Systemen im asciidoc auch eine farbliches Highlighten aktiviert. Dies zeigt beispielsweise an, welcher Befehl ausgeführt wird oder um welche art der Überschrift es sich handelt. Highlighting ist in diesem falle sinnvoll um besser nachvollziehen zu können was sich in der Befehlszeile befindet.
 
 == Diagramme
 
-Um Diagramme erstellen zu können und sie im asciidoctor nutzen zu nutzen,benötigt es die vorhergehende zeile *[ditaa]*
- 
-Mit dieser vorhergehenden Befehlszeile inklusive der nachfolgenden grafik in originalausgabe,
+[source,bash]
+.Um Diagramme erstellen zu können und sie im asciidoctor nutzen zu nutzen,benötigt es die vorhergehende zeile *[ditaa]*.
+
+----
  
 ....
                    +-------------+
@@ -89,8 +173,10 @@ Mit dieser vorhergehenden Befehlszeile inklusive der nachfolgenden grafik in ori
  +---+----+   +-------------+    \---------------/
 ....
 
-kann die obere grafik erzeugt werden.
+----
 
+
+----
 ....
 [ditaa]
 
@@ -102,14 +188,13 @@ kann die obere grafik erzeugt werden.
                        | ditaa in        |
                        |                 v
 ....
+----
 
 
-
-die Grafiken können von hand erledigt werden indem man die zur verfügung gestellten zeichen verwendet oder man nutz die webseiten:
+[source,bash]
+.Grafiken, Tabellen und Ähnliches können entweder mühsam per Hand, oder einfacher durch die unten stehenden Links erzeugt, kopiert und eingefügt werden.
 
 http://stable.ascii-flow.appspot.com/#Draw
-
-oder aber auch auf:
 
 http://asciiflow.com/
 
@@ -117,37 +202,24 @@ http://asciiflow.com/
 
 === Features
 
-Asciidoctor kann mit vielen verschiedenen Features ausgestattert werden.
-Diese Features sind vielseitig einsetzbar.
+[source,bash]
+.Asciidoctor kann mit vielen verschiedenen Features ausgestattert werden.Diese Features sind vielseitig einsetzbar.In unserem Fall ist es asciidoctor-PDF. Wir erzeugen dabei eine Datei im *.pdf* Format.
 
-In unserem Fall ist es _asciidoctor-PDF_
+*beispiel.pdf*
 
-Wir erzeugen eine datei im *.adoc* Format.
-
-
-*beispiel.adoc*
-
-....
-`Asciidoctor erzeugt seine dateien im *.adoc* Format
-Dieses Format eignet sich hervorragend um damit man-pages oder auch HTML dateien besispielsweise damit zu erstellen.`
-....
-
-Diese datei ist jetzt in unserem verzeichnis _/home/desktop/beispiel.adoc_
-
-Möchte man jetzt diese datei in eine PDF format ausgeben lassen, so holt man sich mit dem PDF feature die ausgabe Möglichkeit.
+[source,bash]
+.Möchte man jetzt diese Datei in ein PDF ausgeben lassen, so nutzt man den Befehl:
 
 ----
 asciidoctor-pdf beispiel.adoc
 ----
 
-Es wird im Hintergund die *.adoc* datei kopiert und in eine *.pdf* datei umgewandelt +
-
-In unserem ordner _/home/desktop/_ befinden sich nun 2 Dateien.
+[source,bash]
+.Es wird im Hintergund die *.adoc* datei kopiert und in eine *.pdf* datei umgewandelt.In unserem ordner _/home/desktop/_ befinden sich nun 2 Dateien.
 
 `beispiel.adoc` & `beispiel.pdf`
 
-Beide dateien haben etwas miteinander zu tun.
-Die *.adoc* Datei kann aber im gegensatz zu der *.pdf* Datei aber immer erweitert werden und verändert werden.
+Beide Dateien haben nun den selben Inhalt, aber sind in einem unterschiedlichen Dateiformat. Die *.adoc* Datei kann aber im Gegensatz zu der *.pdf* Datei aber immer erweitert und verändert werden.
 
 
 

@@ -1,6 +1,6 @@
 = Bash
 
-== Einfuehrung
+== Einfuehrung in das Tutorial
 
 Laut wikipedia:
 Bash (auch BASH oder bash), die Bourne-again shell, ist eine freie Unix-Shell unter GPL.
@@ -10,6 +10,7 @@ Als Shell ist Bash eine Mensch-Maschine-Schnittstelle, die eine Umgebung (englis
 Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, miteinander zu kombinieren und sie spielen eine zentrale Rolle im Alltag der Systemadministration.
 
 
+<<<<<<< HEAD
 == Installation/Setup
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
 es wird keine installation benötigt abgesehen von der installation von Linux betriebssystem
@@ -24,13 +25,45 @@ innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
 
 um innerhalb seines verzeichnis ein neues verzeichnis zu erstellen benötigt man den befehl:
 
+=======
+
+== Installation/Setup
+
+Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
+es wird keine Installation benötigt.
+
+== Vorbereitung
+
+Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
+
+== Anwendung
+Man nutzt die Shell für die Ausführung von Befehle.
+Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
+
+[source,bash]
+.Um innerhalb eines Verzeichnis ein neues Verzeichnis zu erstellen benötigt man den Befehl:
+>>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
 ----
 mkdir (verzeichnisname)
 ----
+<<<<<<< HEAD
 der befehl bedeutet 'make directory' also ein verzeichnis erstellen.
 benutzen wir diesen befehl auf dem grundverzeichnis '/home/benutzer' können wir 'XYZ' als verzeichnis
 anlegen indem wir 
 
+=======
+
+-> Der Befehl bedeutet 'make directory' also ein Verzeichnis erstellen.
+
+Benutzen wir diesen Befehl aus dem Grundverzeichnis heraus _/home/benutzer_ wird dort ein Ordner angelegt.
+ 
+ 
+-> Um jetzt in den angelegten Ordner zu wechseln
+
+[source,bash]
+.Mit dem Befehl:
+
+>>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
 ----
 mkdir XYZ
 ----
@@ -38,9 +71,16 @@ eingeben und mit 'return' bestätigen.
  
 Mit dem befehl:
 
+<<<<<<< HEAD
+=======
+->In dem Befehl _cd_ stecken die Worte 'change' und 'directory'
+.gibt man den Befehl ein.
+
+>>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
 ----
 cd
 ----
+<<<<<<< HEAD
 wechselt man das aktuelle verzeichniss auf ein ziel verzeichnis
 in diesem befehl __cd__ stecken die worte 'change' und 'directory'
 
@@ -51,6 +91,19 @@ cd /home/benutzer/XYZ
 ----
 unser aktuellen standort auf das verzeichnis 'XYZ'
 Um nun Herauszufinden in welchen Verzeichnis wir uns befinden: 'Public Works Department'
+=======
+
+-> In diesem befehl _cd_ stecken die worte 'change' und 'directory'
+
+[source,bash]
+.Beispiel: befinden wir uns im Grundverzeichnis: /home/Benutzer/ können wir mit dem Befehl
+
+----
+cd /home/benutzer/XYZ
+----
+
+unser aktuellen Standort auf das Verzeichnis _XYZ_ wechseln.
+>>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
 
 ----
 pwd
@@ -64,6 +117,11 @@ Den aktuellen ordnerinhalt lässt sich anzeigen mit dem befehl:
 ----
 ls -la
 ----
+<<<<<<< HEAD
+=======
+anzeigen. _ls_ steht hier für _listing_ also auflisten,
+die Option _-la_ steht hier für _long all_, also eine lange, ausführliche Liste.
+>>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
 
 steht in dem falle das __ls__ für 'listing' also auflisten,
 die option __-la__ steht hierbei für 'long all' also lange, ausführliche liste.
@@ -111,6 +169,12 @@ n dem falle hier ist der neu angelegte benutzer *RMTHLP*
  
 um einen ssh server direkt zu eröffnen brauch man den befehl
 
+<<<<<<< HEAD
+=======
+[source,bash]
+.Die Auflistung in langer Ausführung zB im _Home_ Verzeichnis bekommt man mit
+
+>>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
 ----
 ssh -gNR 127.0.01:22<Benutzernummer>:127.0.0.1:22 <benutzername>@ita4.mgeg.de
 ----
