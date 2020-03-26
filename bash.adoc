@@ -24,28 +24,11 @@ Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallie
 Man nutzt die Shell für die Ausführung von Befehle.
 Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
 
-== Anwendung
-Man nutzt die Shell für die Ausführung von Befehlen. 
-Innerhalb der Shell kann man sich über Befehle in den Verzeichnissen bewegen.
-
-
-Für die Bash wird keine weitere Vorbereitung benötigt, da es eine vorinstallierte Anwendung ist.
-
-== Anwendung
-Man nutz die shell für ausführungen von Befehlen direkt aus der Shell heraus
-innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
-
-
-== Anwendung
-Man nutz die shell für ausführungen von Befehlen direkt aus der Shell heraus
-innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
-
 [source,bash]
 .Um innerhalb eines Verzeichnis ein neues Verzeichnis zu erstellen benötigt man den Befehl:
 ----
 mkdir *Verzeichnisname)*
 ----
-
 
 -> Der Befehl bedeutet 'make directory' also ein Verzeichnis erstellen.
 
@@ -53,25 +36,31 @@ Benutzen wir diesen Befehl aus dem Grundverzeichnis heraus _/home/benutzer_ wird
  
  
 -> Um jetzt in den angelegten Ordner zu wechseln
+
 [source,bash]
 .Mit dem Befehl:
+
 ----
 cd *Verzeichnisname*
 ----
 wechselt man aus dem aktuellen Verzeichnis zu einem Ziel Verzeichnis.
 
 ->In dem Befehl _cd_ stecken die Worte 'change' und 'directory'
-.gibt man den Befehl ein
+.gibt man den Befehl ein.
+
 ----
 cd (Ordnername)
 ----
+
 -> In diesem befehl _cd_ stecken die worte 'change' und 'directory'
 
 [source,bash]
 .Beispiel: befinden wir uns im Grundverzeichnis: /home/Benutzer/ können wir mit dem Befehl
+
 ----
 cd /home/benutzer/XYZ
 ----
+
 unser aktuellen Standort auf das Verzeichnis _XYZ_ wechseln.
 
 [source,bash]
