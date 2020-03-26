@@ -120,10 +120,17 @@ git push
 git pull
 ----
 
+<<<<<<< HEAD
 == Git Branching und Merging
 
 Git-Branches sind quasi Verweise auf eine Änderung, ohne diese direkt in den Master Branch zu übernehmen. So ist es weniger wahrscheinlich, dass evtl. Fehler in den Master Branch übernommen werden.
  
+=======
+== Projekte mit Git synchronisieren
+
+=== _Verzeichnis erstellen, unter Git Kontrolle stellen und mit GitHub synchronisieren_
+
+>>>>>>> 64fc19b28ef0e4910cd269131ffa09abbd569f5f
 
 [source,bash]
 .Um alle Branches in deinem Repository aufzuführen 
@@ -180,6 +187,7 @@ git push origin *BRANCHNAME*
 git merge *Name*
 ----
  
+<<<<<<< HEAD
 Git versucht die Änderungen automatisch zusammenzuführen. Dies ist leider nicht immer möglich und endet in _Konflikten_, die durch manuelles editieren gelöst werden können. Das muss Git aber mit _git add *DateiName* mitgeteilt werden. Danach sollte dem _mergen_ nichts mehr im Wege stehen.
 
 == In Git Branches mit tags versehen
@@ -192,10 +200,78 @@ Git versucht die Änderungen automatisch zusammenzuführen. Dies ist leider nich
 git tag -m "TEXT/Vers.Nummer" *NameDesTags*
 ----
 
+<<<<<<< HEAD
+-> EndOfLine <-
+=======
+=== Git Branch
+
+Git-Branches sind quasi Verweise auf einen Snapshot deiner Änderungen. Wenn du ein neues Feature hinzufügen oder einen Fehler beheben möchtest, legst du einen neuen Branch an, der deine (großen oder kleinen) Änderungen enthält. Auf diese Weise ist es weniger wahrscheinlich, dass unstabiler Code in die Haupt-Codebasis gemergt wird, und du hast die Möglichkeit, deinen zukünftigen Verlauf zu bereinigen, bevor du den Merge in den Haupt-Branch durchführst.
+
+[source,bash]
+.Führt alle Branches in deinem Repository auf.
+----
+git branch
+----
+
+[source,bash]
+.Mit diesem Befehl erstellst du einen neuen Branch mit dem Namen, den du für <branch> angibst.
+----
+git branch <branchname>
+----
+
+[source,bash]
+.und mit diesem Befehl wechselst den Branch.
+----
+git checkout <Branchname>
+----
+>>>>>>> 64fc19b28ef0e4910cd269131ffa09abbd569f5f
+
+[source,bash]
+.Datien vom github runterladen.
+----
+git pull origin <branchname>
+----
+
+[source,bash]
+.Datein zu github Hochladen.
+----
+git push origin <branchname>
+----
+
+[source,bash]
+.um zu mergen muss man als branch master sein.
+----
+git merge <branchname>
+----
+
+<<<<<<< HEAD
+=======
+== Git Tag
+=======
 <DOMNMN>
 
 
+>>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
 
+Git Tags bieten eine einfache Möglichkeit, um bestimmte Revisionen eines Repos zu kennzeichnen. Sie können z.B. für die Kennzeichnung einer neuen Release-Version benutzt werden. Dadurch wird ein wichtiger Punkt der Entwicklung permanent markiert und ist einfach wieder zu erkennen.
 
+== Tags erstellen:
 
+Ein neuer Tag kann mit dem Kommando "git tag" erstellt werden. Es werden zwei Arten von Tags unterschieden:
 
+* Annotated Tags: Diese Tags resultieren immer in einem eigenen Commit und bringen Informationen wie Tagger, Email, Datum oder Signatur mit.
+
+[source,bash]
+.Command.
+----
+git tag -a -m "Beschreibung"
+----
+
+* Lightweight Tags: Diese Art von Tags sind eine simple Referenz auf einen Commit (der Hash-Wert wird als Tag referenziert). Extra-Information  werden zu diesen Tags nicht hinzugefügt.
+
+[source,bash]
+.Command.
+----
+git tag <versionsname>-lw
+----
+>>>>>>> 64fc19b28ef0e4910cd269131ffa09abbd569f5f

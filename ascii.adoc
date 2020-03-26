@@ -72,6 +72,8 @@ Um verschiedene Überschriften zu erstellen, damit man im Text eine Struktur der
 ----
 
 
+
+
 == Schriftarten
 
 [source,bash]
@@ -116,7 +118,7 @@ Dabei ist zu beachten, dass die Beschreibungen direkt nach dem *.* in der zweite
 |Geburtsdatum
 |Schuhgroesse
 
-|Peter
+i|Peter
 |20.02.1980
 |45
 
