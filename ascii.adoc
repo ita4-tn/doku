@@ -29,7 +29,7 @@ AsciiDoc ist eine vereinfachte Auszeichnungssprache, die dazu dient, Texte in ve
 == Wie installiere ich Asciidoc
 
 [source,bash]
-.Zu allererst muss ich mich meinen Benutzer als Root ändern
+.Zu allererst muss ich zum Root werden
 ----
 sudo -iu root
 ----
@@ -70,6 +70,8 @@ Um verschiedene Überschriften zu erstellen, damit man im Text eine Struktur der
 ----
 ==== Überschrift H3
 ----
+
+
 
 
 == Schriftarten
@@ -114,9 +116,9 @@ Dabei ist zu beachten, dass die Beschreibungen direkt nach dem *.* in der zweite
 |===
 |Name
 |Geburtsdatum
-|Schugroesse
+|Schuhgroesse
 
-|Peter
+i|Peter
 |20.02.1980
 |45
 
@@ -134,7 +136,7 @@ Dabei ist zu beachten, dass die Beschreibungen direkt nach dem *.* in der zweite
 |===
 |Name
 |Geburtsdatum
-|Schugroesse
+|Schuhgroesse
 
 |Peter
 |20.02.1980
