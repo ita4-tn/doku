@@ -107,7 +107,7 @@ useradd -s /bin/bash -md /home/rmthlp -G sudo -p '$6$/z8.rV/8k3aqXVFR$/MoaT7EXd0
 ----
 mit dem befehl kann ein neuer benutzer angelegt werden.
 
-
+n dem falle hier ist der neu angelegte benutzer *RMTHLP*
  
 um einen ssh server direkt zu eröffnen brauch man den befehl
 
