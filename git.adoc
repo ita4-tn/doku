@@ -1,8 +1,8 @@
-= _GIT_
+= GIT
 
 
 
-== _Autor und E-Mail Adresse hinzufügen_
+== Autor und E-Mail Adresse hinzufügen
 
 [source,bash]
 .Namen und E-Mail Adresse hinzufügen, damit Git einen Commit einem Autor zuordnen kann
@@ -14,7 +14,7 @@ git config --global user.email "email@email.de
 ----
 
 
-== _Ein Repository anlegen_
+== Ein Repository anlegen
 
 [source,bash]
 .Damit Git die Dateien verwalten kann, muss ein Repository für das Projekt angelegt werden
@@ -26,7 +26,7 @@ interne Daten verwaltet werden. Sollte das Verzeichnis beispiel/ bereits existie
 darin ein neues Repository. Gibt es bereits sowohl das Verzeichnis wie auch ein Repository, macht
 Git gar nichts.
 
-== _Den aktuellen Status anzeigen_
+== Den aktuellen Status anzeigen
 [source,bash]
 .in das Verzeichnis wechseln und den aktuellen Status anzeigen
 ----
@@ -39,7 +39,7 @@ git status
 -> Git gibt einen Hinweis aus, das man vor dem ersten Commit steht, Git aber nichts gefunden hat.
 -> Git liefert noch einen Hinweis welche Schritte sich als nächstes anbieten
 
-== _Erster Commit_
+== Erster Commit
 
 [source,bash]
 .Eine Datei Git zur Verwaltung übergeben
@@ -68,7 +68,7 @@ nothing to commit, working directory clean
 ----
 
 
-== _Vergleichen von Revisionen_
+== Vergleichen von Revisionen
 
 [source,bash]
 .Mit den Dateien des "working trees" bzw. des Index vergleichen
@@ -88,7 +88,7 @@ git diff [rev1]..[rev2] -- src/  # Unterschiede in src/ zwischen rev1 und rev2
 ----
 
 
-== _Anzeigen der Commit-Historie_
+== Anzeigen der Commit-Historie
 
 [source,bash]
 .Nachdem mehrere Commits erstellt wurden, kann man bei Bedarf zurück schauen und sehen was alles passiert ist mit
@@ -98,7 +98,7 @@ git log
 -> Standardmäßig listet _git log_, ohne Argumente, die in diesem Repository vorgenommenen Commits in umgekehrter chronologischer Reihenfolge auf, d.h. die neuesten Commits werden als erstes angezeigt.
 
 
-== _GitHub.com_
+== GitHub.com
 
 GitHub ist ein Onlinedienst, der Software-Entwicklungsprojekte auf seinen Servern bereitstellt (Filehosting). Namensgebend war das Versionsverwaltungssystem Git.
 
@@ -109,47 +109,47 @@ GitHub ist ein Onlinedienst, der Software-Entwicklungsprojekte auf seinen Server
 https://github.com/
 ----
 
-Auf der Seite muss man sich nun einen Account erstellen. Mit zu Hilfenahme seiner Emailadresse und einem Pseudonym für Github, erstellt man sich nun seinen eigenen Account. 
-Nun verifiziert man seinen Account über seine Emailadresse, damit man mit Github arbeiten kann.
+Auf der Seite muss man sich nun einen Account erstellen. Mit einer E-Mailadresse und einem Pseudonym, erstellt man sich nun seinen eigenen Account auf GitHub.com 
+Nun verifiziert man seinen Account über einen Link aus der Bestätigungsmail, damit man mit Github arbeiten kann.
 
 
-== _Create a new repository_
+== Create a new Repository
 
-Ein repository ist eine Art Projekt, dem man zuerst einen Namen geben muss. Dieser sollte sich auf den Inhalt beziehen, damit man im nachhinein seine Dateien wiederfinden kann.
+Ein Repository ist eine Art Projekt, dem man zuerst einen Namen geben muss. 
+Dieser sollte sich auf den Inhalt beziehen, damit man im nachhinein seine Dateien wiederfinden kann.
 
 In der Beschreibung kann man nun etwas eintragen, was den Inhalt beschreibt, ist aber nicht zwingend erforderlich.
 
-Es gibt öffentlich und private repositorys. Wenn man sein repository auf public stellt, kann jeder darauf zugreifen. Private repositorys kann man allerdings nur mit einem kostenpflichtigen Account erstellen.
+Es gibt öffentliche und private Repositorys. Wenn man sein Repository auf _Public_ stellt, kann jeder darauf zugreifen.
+_Private_ Repositorys lassen sich allerdings nur mit einem kostenpflichtigen Account erstellen.
 
 
-Im nächsten Schritt fragt er danach, eine README Datei anzulegen. Dies ist sinnvoll, da dort wichtige Informationen hinterlegt werden können.
+Im nächsten Schritt fragt GitHub ob eine README Datei angelegt werden soll.
+Dies ist sinnvoll, da dort wichtige Informationen hinterlegt werden können.
 
 
-== _Clone a Repository_
+== Clone a Repository
 
 [source,bash]
-.Um ein repository zu clonen, muss man nun den Link aus der jeweiligen repository von github kopieren und mit dem Befehl ins Zielverzeichnis kopieren.
+.Um ein Repository zu _clonen_, muss man den Link aus des jeweiligen Repository von GitHub kopieren und nach dem folgenden Befehl einfügen.
 ----
 git clone *Link von GitHub.com einfügen*
 ----
 Dieses Verzeichnis steht nun automatisch unter der Kontrolle von Git.
 
-
 [source,bash]
-.ein Repository vom PC auf GitHub.com _uploaden_
-----
-git push
-----
-
-[source,bash]
-.ein Repository von GitHub.com auf den PC _downloaden_
+.Um sein _lokales_ Repository mit dem auf GitHub zu synchronisieren gibt man folgenden Befehl ein
 ----
 git pull
 ----
 
+source,bash]
+.Um seine _lokal_ gespeicherten Dateien mit dem GitHub Repository zu synchronisieren wird folgender Befehl eingegeben
+----
+git push
+----
 
 
-== Projekte mit Git synchronisieren
 
 
 == _Verzeichnis erstellen, unter Git Kontrolle stellen und mit GitHub synchronisieren_
@@ -174,7 +174,7 @@ git init
 ----
 
 [source,bash]
-.Dann erstellen wir eine text Datei
+.Dann erstellen wir eine Text Datei
 ----
 vi beispiel.txt
 ----
@@ -188,7 +188,7 @@ git add beispiel.txt
 === Dateien synchronisieren
 
 [source,bash]
-.Um eine remote git zu erstellen, geben wir nun den Befehl, mit dem dazugehörigen Link des Administrators des Projektes auf github, ein.
+.Um eine remote git zu erstellen, geben wir nun den Befehl, mit dem dazugehörigen Link des Administrators des Projektes auf GitHub ein.
 ----
 git remote add origin "Link von Github repository"
 ----
@@ -210,7 +210,7 @@ git commit -m "Änderung"
 Nun zeigt er die gewänderte Datei unter git status an.
 
 [source,bash]
-.Im Anschluss synchronisieren wir unsere Systemdaten mit github
+.Im Anschluss synchronisieren wir unsere Systemdaten mit dem GitHub Repository
 ----
 git push -u origin master
 ----
