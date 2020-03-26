@@ -2,7 +2,7 @@
 
 == Einfuehrung in das Tutorial
 
-Laut wikipedia:
+Laut Wikipedia:
 Bash (auch BASH oder bash), die Bourne-again shell, ist eine freie Unix-Shell unter GPL.
 
 Als Shell ist Bash eine Mensch-Maschine-Schnittstelle, die eine Umgebung (englisch environment) bereitstellt, in der zeilenweise Texteingaben und -ausgaben möglich sind. Letzteres erfolgt über die Befehlszeile, in die Befehle eingetippt und durch betätigen der Eingabetaste eingegeben werden. 
@@ -10,17 +10,14 @@ Als Shell ist Bash eine Mensch-Maschine-Schnittstelle, die eine Umgebung (englis
 Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, miteinander zu kombinieren und sie spielen eine zentrale Rolle im Alltag der Systemadministration.
 
 
-<<<<<<< HEAD
 == Installation/Setup
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
-es wird keine installation benötigt abgesehen von der installation von Linux betriebssystem
+daher wird keine Installation benötigt wenn man auf einer Linus Distribution arbeitet.
 
-=== Vorbereitung
-Für die Bash wird keine weiter vorbereitung benötigt.
-Daher sie eine vorinstallierte shell ist!
+
 
 == Anwendung
-Man nutz die shell für ausführungen von Befehlen direkt aus der Shell heraus
+Man nutzt die shell für Ausführungen von Befehlen direkt aus der Shell heraus
 innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
 
 um innerhalb seines verzeichnis ein neues verzeichnis zu erstellen benötigt man den befehl:
