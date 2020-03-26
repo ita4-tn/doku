@@ -12,9 +12,9 @@ https://www.jetbrains.com/de-de/pycharm/download/#section=linux
 
 Oder man installiert sich, sofern man eine Ubuntu Distribution besitzt, Pycharm direkt über den Ubuntustore auf seinem System.
 
-Wenn man den Download link benutzt, kann man einmal eine kostenlose Version, die sogenannte Community Version auswählen, oder aber eine kostenpflichtige. +
+Wenn man den Downloadlink benutzt hat man die Auswahl zwischen einer kostenfreien und einer kostenpflichtigen Version. Die kostenlose Version ist die Communityverion.
 
-Wenn man diese heruntergeladen hat, entpackt man diese Datei zunächst und öffnet das Verzeichnis mit dem Befehl
+Wenn man eine Version heruntergeladen hat, entpackt man diese Datei zunächst und öffnet das Verzeichnis mit dem Befehl
 
 
 [source,bash]
