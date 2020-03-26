@@ -1,0 +1,41 @@
+= Python
+
+== Installation
+
+----
+https://www.jetbrains.com/de-de/pycharm/download/#section=linux
+----
+
+1- die community version Herunteladen
+
+2- Entpacken (am besten in die heimat verzeichnes)
+
+3- öffne den verzeichnes mit
+
+[source,bash]
+
+----
+cd pycharm-community-2019.3.4/bin
+----
+
+[source,bash]
+
+.Command ausführen.
+
+----
+pycharm.sh
+----
+
+* unten rechts unter configure kann man eine desktop icon erstellen unter:
+
+----
+Creat desktop entry
+----
+
+4- Aktuelle veriosion von python Installieren,werd mit denn command
+
+[source,bash]
+
+----
+apt-get install python3
+----
