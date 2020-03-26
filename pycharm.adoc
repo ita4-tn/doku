@@ -4,7 +4,7 @@ PyCharm ist eine integrierte Entwicklungsumgebung (IDE) für die Programmierspra
 
 == Installation
 
-Um Pycharm zu installieren kann man sich entweder auf der Internetseite, den die passende Version herunterladen. Den Downloadlink findet man unter folgendem Link
+Um Pycharm zu installieren kann man sich entweder auf der Internetseite, den die passende Version herunterladen. Den Download findet man unter folgendem Link:
 
 ----
 https://www.jetbrains.com/de-de/pycharm/download/#section=linux
@@ -12,7 +12,7 @@ https://www.jetbrains.com/de-de/pycharm/download/#section=linux
 
 Oder man installiert sich, sofern man eine Ubuntu Distribution besitzt, Pycharm direkt über den Ubuntustore auf seinem System.
 
-Wenn man den Downloadlink benutzt hat man die Auswahl zwischen einer kostenfreien und einer kostenpflichtigen Version. Die kostenlose Version ist die Communityverion.
+Wenn man den Downloadlink benutzt hat man die Auswahl zwischen einer kostenfreien und einer kostenpflichtigen Version. Die kostenlose Version ist die Communityversion.
 
 Wenn man eine Version heruntergeladen hat, entpackt man diese Datei zunächst und öffnet das Verzeichnis mit dem Befehl
 
@@ -30,10 +30,10 @@ cd pycharm-community-2019.3.4/bin
 pycharm.sh
 ----
 
-* Auf der unteren rechten Seite, unter configure kann man ein Desktopicon erstellen 
+* Auf der unteren rechten Seite, unter _configure_ kann man sich ein Desktop Icon erstellenlassen 
 
 ----
-Creat desktop entry
+Create desktop entry
 ----
 
 
