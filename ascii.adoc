@@ -26,11 +26,17 @@ dieses Format eignet sich hervorragend um damit man-pages oder auch HTML dateien
 
 == Schriftarten
 
+----
 *This is bold text*
+----
 
+----
 _This is cursiv text_
+----
 
+----
 `This is mono text`
+----
 
 == Source CodecDarestellen:
 
@@ -40,6 +46,7 @@ _This is cursiv text_
 
 ==== Personen
 
+----
 [width="60%",cols="<50,<30,>20",options="header,footer"]
 |===
 |Name
@@ -55,6 +62,7 @@ _This is cursiv text_
 |38
 
 |===
+----
 
 === 
 
@@ -70,6 +78,8 @@ Highlighting ist in diesem falle sinnvoll um besser nachvollziehen zu können wa
 Um Diagramme erstellen zu können und sie im asciidoctor nutzen zu nutzen,benötigt es die vorhergehende zeile *[ditaa]*
  
 Mit dieser vorhergehenden Befehlszeile inklusive der nachfolgenden grafik in originalausgabe,
+
+----
  
 ....
                    +-------------+
@@ -87,8 +97,11 @@ Mit dieser vorhergehenden Befehlszeile inklusive der nachfolgenden grafik in ori
  +---+----+   +-------------+    \---------------/
 ....
 
+----
+
 kann die obere grafik erzeugt werden.
 
+----
 ....
 [ditaa]
 
@@ -100,6 +113,7 @@ kann die obere grafik erzeugt werden.
                        | ditaa in        |
                        |                 v
 ....
+----
 
 
 
