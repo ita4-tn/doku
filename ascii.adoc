@@ -118,7 +118,7 @@ Dabei ist zu beachten, dass die Beschreibungen direkt nach dem *.* in der zweite
 |Geburtsdatum
 |Schuhgroesse
 
-i|Peter
+|Peter
 |20.02.1980
 |45
 
