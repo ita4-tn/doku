@@ -145,9 +145,9 @@ git branch *NAME*
 ----
 git branch -d *NAME*
 ----
--> wenn das -d groß geschrieben wird _-D_, wird das löschen erzwungen. Selbst wenn es noch nicht gemergte Commits gibt.
+-> mit groß geschriebenem_-D_, wird das löschen erzwungen. Selbst wenn es noch nicht gemergte Commits gibt.
 
--> Man befindet sich standart mäßig immer im _Master-Branch_
+-> standardmäßig befindet man sich immer im  _Master-Branch_
 
 [source,bash]
 .Um zu einem Branch zu wechseln
@@ -192,7 +192,9 @@ Git versucht die Änderungen automatisch zusammenzuführen. Dies ist leider nich
 git tag -m "TEXT/Vers.Nummer" *NameDesTags*
 ----
 
--> EndOfLine <-
+<DOMNMN>
+
+
 
 
 
