@@ -4,7 +4,7 @@ PyCharm ist eine integrierte Entwicklungsumgebung (IDE) für die Programmierspra
 
 == Installation
 
-Um Pycharm zu installieren kann man sich entweder auf der Internetseite, den die passende Version herunterladen. Den Downloadlink findet man unter folgendem Link
+Um Pycharm zu installieren kann man sich entweder auf der Internetseite die passende Version herunterladen. Den Downloadlink findet man unter folgendem Link
 
 ----
 https://www.jetbrains.com/de-de/pycharm/download/#section=linux
