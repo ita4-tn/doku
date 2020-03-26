@@ -1,8 +1,8 @@
-= GIT
+= _GIT_
 
 
 
-== Autor und E-Mail Adresse hinzufügen
+== _Autor und E-Mail Adresse hinzufügen_
 
 [source,bash]
 .Namen und E-Mail Adresse hinzufügen, damit Git einen Commit einem Autor zuordnen kann
@@ -14,23 +14,23 @@ git config --global user.email "email@email.de
 ----
 
 
-== Ein Repository anlegen
+== _Ein Repository anlegen_
+
 [source,bash]
 .Damit Git die Dateien verwalten kann, muss ein Repository für das Projekt angelegt werden
 ----
-git init *Projektname*
+git init "Projektname"
 ----
-
 -> Zunächst erstellt Git das Verzeichnis "Projektname"/, falls es noch nicht existiert. Danach initialisiert Git ein leeres Repository in diesem Verzeichnis und legt dafür ein Unterverzeichnis .git/ an, in dem
 interne Daten verwaltet werden. Sollte das Verzeichnis beispiel/ bereits existieren, erstellt Git
 darin ein neues Repository. Gibt es bereits sowohl das Verzeichnis wie auch ein Repository, macht
 Git gar nichts.
 
-== Den aktuellen Status anzeigen
+== _Den aktuellen Status anzeigen_
 [source,bash]
 .in das Verzeichnis wechseln und den aktuellen Status anzeigen
 ----
-cd *Projektname*
+cd "Projektname"
 ----
 ----
 git status
@@ -39,12 +39,12 @@ git status
 -> Git gibt einen Hinweis aus, das man vor dem ersten Commit steht, Git aber nichts gefunden hat.
 -> Git liefert noch einen Hinweis welche Schritte sich als nächstes anbieten
 
-== Erster Commit
+== _Erster Commit_
 
 [source,bash]
 .Eine Datei Git zur Verwaltung übergeben
 ----
-git add *Datei*
+git add "Datei"
 ----
 
 -> Git wird die Veränderungen — also unsere neue Datei — beim nächsten Commit übernehmen.
@@ -53,15 +53,14 @@ Allerdings ist dieser Commit noch nicht vollzogen — wir haben ihn bisher ledig
 Veränderungen, die in den nächsten Commit einfließen sollen, sammeln.
 
 [source,bash]
-.Mit dem Kommando _git commit_ den ersten Commit erstellen und mit der Option _-m_ wird eine Commit Message übergeben.
+.mit dem Kommando _git commit_ den ersten Commit erstellen und mit der Option _-m_ wird eine Commit Message übergeben.
 ----
 git commit -m "erste Version"
 ----
 -> Git bestätigt, dass der Vorgang erfolgreich abgeschlossen wurde und die Datei von nun an verwaltet
 wird.
-
 [source,bash]
-.Jetzt lässt sich mit _git status_ das ganze nochmal überprüfen. Git sollte jetzt ausgeben das, dass Repository _sauber_ ist.
+.jetzt lässt sich mit _git status_ das ganze nochmal überprüfen. Git sollte jetzt ausgeben das, dass Repository _sauber_ ist.
 ----
 git status
 On branch master
@@ -69,7 +68,7 @@ nothing to commit, working directory clean
 ----
 
 
-== Vergleichen von Revisionen
+== _Vergleichen von Revisionen_
 
 [source,bash]
 .Mit den Dateien des "working trees" bzw. des Index vergleichen
@@ -79,7 +78,6 @@ git diff [rev]                   # Vergleich Working Tree - [rev]
 git diff --cached                # Vergleich Index - HEAD
 git diff --cached [rev]          # Vergleich Index - [rev]
 ----
-
 [source,bash]
 .Revisionen vergleichen
 ----
@@ -90,7 +88,7 @@ git diff [rev1]..[rev2] -- src/  # Unterschiede in src/ zwischen rev1 und rev2
 ----
 
 
-== Anzeigen der Commit-Historie
+== _Anzeigen der Commit-Historie_
 
 [source,bash]
 .Nachdem mehrere Commits erstellt wurden, kann man bei Bedarf zurück schauen und sehen was alles passiert ist mit
@@ -102,98 +100,162 @@ git log
 
 == _GitHub.com_
 
+GitHub ist ein Onlinedienst, der Software-Entwicklungsprojekte auf seinen Servern bereitstellt (Filehosting). Namensgebend war das Versionsverwaltungssystem Git.
+
 [source,bash]
-.Ein neues Repository von GitHub das erste mal _clonen_
+.Um einen Githubaccount anzulegen muss man zuerst die Homepage von Github aufrufen
+
+----
+https://github.com/
+----
+
+Auf der Seite muss man sich nun einen Account erstellen. Mit zu Hilfenahme seiner Emailadresse und einem Pseudonym für Github, erstellt man sich nun seinen eigenen Account. 
+Nun verifiziert man seinen Account über seine Emailadresse, damit man mit Github arbeiten kann.
+
+
+== _Create a new repository_
+
+Ein repository ist eine Art Projekt, dem man zuerst einen Namen geben muss. Dieser sollte sich auf den Inhalt beziehen, damit man im nachhinein seine Dateien wiederfinden kann.
+
+In der Beschreibung kann man nun etwas eintragen, was den Inhalt beschreibt, ist aber nicht zwingend erforderlich.
+
+Es gibt öffentlich und private repositorys. Wenn man sein repository auf public stellt, kann jeder darauf zugreifen. Private repositorys kann man allerdings nur mit einem kostenpflichtigen Account erstellen.
+
+
+Im nächsten Schritt fragt er danach, eine README Datei anzulegen. Dies ist sinnvoll, da dort wichtige Informationen hinterlegt werden können.
+
+
+== _Clone a Repository_
+
+[source,bash]
+.Um ein repository zu clonen, muss man nun den Link aus der jeweiligen repository von github kopieren und mit dem Befehl ins Zielverzeichnis kopieren.
 ----
 git clone *Link von GitHub.com einfügen*
 ----
+Dieses Verzeichnis steht nun automatisch unter der Kontrolle von Git.
+
 
 [source,bash]
-.Ein Repository vom PC auf GitHub.com _uploaden_
+.ein Repository vom PC auf GitHub.com _uploaden_
 ----
 git push
 ----
 
 [source,bash]
-.Ein Repository von GitHub.com auf den PC _downloaden_
+.ein Repository von GitHub.com auf den PC _downloaden_
 ----
 git pull
 ----
 
-== Git Branching und Merging
 
-Git-Branches sind quasi Verweise auf eine Änderung, ohne diese direkt in den Master Branch zu übernehmen. So ist es weniger wahrscheinlich, dass evtl. Fehler in den Master Branch übernommen werden.
+
+== Projekte mit Git synchronisieren
+
+
+== _Verzeichnis erstellen, unter Git Kontrolle stellen und mit GitHub synchronisieren_
+
+
+[source,bash]
+.Zuerst erstellen wir ein gewünschtes Verzeichnis mit dem Befehl
+----
+mkdir "name"
+----
+
+[source,bash]
+.Anschließend wechseln wir in das Verzeichnis hinein
+----
+cd "name"
+----
+
+[source,bash]
+.Um das Verzeichnis unter Gitkontrolle zu stellen, benutzen wir den Befehl
+----
+git init
+----
+
+[source,bash]
+.Dann erstellen wir eine text Datei
+----
+vi beispiel.txt
+----
+
+[source,bash]
+.Die erstellte Datei zu git hinzufügen
+----
+git add beispiel.txt
+----
+
+=== Dateien synchronisieren
+
+[source,bash]
+.Um eine remote git zu erstellen, geben wir nun den Befehl, mit dem dazugehörigen Link des Administrators des Projektes auf github, ein.
+----
+git remote add origin "Link von Github repository"
+----
+
+[source,bash]
+.Im Anschluss laden wir die Dateien herunter und synchronisieren diese mit unserem System
+----
+git pull origin master
+----
+
+=== Dateien von unserem System mit github synchronisieren
+
+[source,bash]
+.Zuerst muss die gewünscht Datei commitet werden, dazu geben wir den Befehl ein.
+----
+git commit -m "Änderung"
+----
+
+Nun zeigt er die gewänderte Datei unter git status an.
+
+[source,bash]
+.Im Anschluss synchronisieren wir unsere Systemdaten mit github
+----
+git push -u origin master
+----
  
 
-[source,bash]
-.Um alle Branches in deinem Repository aufzuführen 
-----
-git branch
-----
-
--> Es lassen sich für jeden _Benutzer_ eigene Branches erstellen.
-
-[source,bash]
-.Um einen neuen Branch zu erstellen
-----
-git branch *NAME*
-----
--> der neue Branch wird jedoch nicht _ausgecheckt_
-
-[source,bash]
-.Um einen angelegten Branch zu löschen
-----
-git branch -d *NAME*
-----
--> wenn das -d groß geschrieben wird _-D_, wird das löschen erzwungen. Selbst wenn es noch nicht gemergte Commits gibt.
-
--> Man befindet sich standart mäßig immer im _Master-Branch_
-
-[source,bash]
-.Um zu einem Branch zu wechseln
-----
-git checkout *NAME*
-----
--> alle Änderungen die unter einem anderem Branch als dem Master-Branch durchgeführt wurden, sind im Repository auch nur unter dem Branch verfügbar und nicht im Master-Branch.
-
--> Den eigenen _Branch_ auf den aktuellen Stand bringen... 
-
-[source,bash]
-.Um das lokale Repository mit den neuesten Änderungen zu aktualisieren. Zum Bsp. wenn vorher von einem anderen Gerät aus am Repository gearbeitet wurde.
-----
-git pull origin *BRANCHNAME*
-----
--> der eigene _Branch_ wird mit GitHub synchronisiert
-
-[source,bash]
-.Um seine Änderungen in seinem Branch an GitHub zu übertragen
-----
-git push origin *BRANCHNAME*
-----
-
--> auf GitHub ist die geänderte Version jetzt unter dem eigenen _Branch_ sichtbar
 
 
-[source,bash]
-.Um hinterher die Änderung in den Master-Branch zu übernehmen, müssen die Dateien gemergt werden. Dazu vorher in den Master-Branch wechseln.
-----
-git merge *Name*
-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
-Git versucht die Änderungen automatisch zusammenzuführen. Dies ist leider nicht immer möglich und endet in _Konflikten_, die durch manuelles editieren gelöst werden können. Das muss Git aber mit _git add *DateiName* mitgeteilt werden. Danach sollte dem _mergen_ nichts mehr im Wege stehen.
-
-== In Git Branches mit tags versehen
-
--> Ein _tag_ kann nur einmal mit demselben Text vergeben werden, so ist jeder _tag_ gut zu zuordnen. 
-
-[source,bash]
-.So lassen sich einfach, aussagekräftige _tags_ erstellen.
-----
-git tag -m "TEXT/Vers.Nummer" *NameDesTags*
-----
-
--> EndOfLine <-
 
 
+
+
+
+
+
+
+
+ 
 
 
