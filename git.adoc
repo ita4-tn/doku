@@ -1,11 +1,32 @@
 = GIT
 
+==_Was ist Git?_
+
+Git ist eine _open source_ Software zur verteilten Versionsverwaltung von Dateien. Es läuft auf fast allen modernen Betriebssystemen wie z.B. Linux, Solaris, Windows und in leicht abgewandelter Version auch auf macOS.
+
+Git ist als dezentrales System ausgelegt, es kommt ohne zentrale Datenbank aus. Jeder Nutzer hat _seine eigene_ Datenbank, unter Git wird das _Repository_ gennant. +
+Mit Git wird die meiste Zeit in dieser lokalen Datenbank gearbeitet und tauscht dann die erzeugten Änderungen, _Commits_ genannt, mit anderen Projektbeteiligten aus. Hier wird meist auf Plattformen wie z.B. GitHub.com gesetzt.
+Die Versionsheschichte wird bei Git durch eine einfach verkettete Liste abgebildet, in der die einzelnen _Knotenpunkte_ durch die Commits repräsentiert werden.
 
 
-== Autor und E-Mail Adresse hinzufügen
+== Installation von Git unter der Linux Distribution Ubuntu
 
 [source,bash]
-.Namen und E-Mail Adresse hinzufügen, damit Git einen Commit einem Autor zuordnen kann
+.mit folgendem Befehl wird Git installiert
+----
+sudo apt-get install git
+----
+
+-> der Teil _apt-get_ ändert sich je nach installierter Linux Distribution. 
+
+
+== Autor und E-Mail Adresse in die Git Config einfügen
+
+-> Zu Beginn wird in die _Git Config_ der eigene Name und die E-Mail Adresse eingetragen, damit ersichtlich ist wer welchen _Commit_ gemacht hat.
+
+
+[source,bash]
+.folgende Befehle tragen Name und E-Mail Adresse in die Git Config ein
 ----
 git config --global user.name "Max Mustermann"
 ----
