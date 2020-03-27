@@ -14,7 +14,6 @@ Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, mitei
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
 daher wird keine Installation benötigt wenn man auf einer Linus Distribution arbeitet.
 
-=======
 
 
 [source,bash]
@@ -27,8 +26,15 @@ mkdir (verzeichnisname)
 Der Befehl bedeutet 'make directory' 
 Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ' als Ordner anlegen.
 
-=======
+[source,bash]
+.Um ein Verzeichnes zu löschen benötigt man den Befehl:
 
+----
+rmdir (Verzeichnisname)
+----
+
+Der Befehl bedeutet 'remove directory' 
+Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ' Löschen.
 
  
 
@@ -53,9 +59,16 @@ Beispiel: Befinden wir uns im Grundverzeichnis: /home/benutzer/ können wir mit 
 cd /home/benutzer/XYZ
 ----
 unser aktuellen standort auf das verzeichnis 'XYZ'
+
+
+[source,bash]
+.um in den Heimatverzeichnis zurück zukommen benutzen wir den Befehl:
+
+----
+cd
+----
+
 Um nun Herauszufinden in welchem Verzeichnis wir uns befinden: 'print working directory'
-
-
 
 
 [source,bash]
@@ -87,10 +100,27 @@ Die Liste wird in voller Ausführung angezeigt.
 Möchte man jetzt in diesem Verzeichnis eine Datei erstellen:
 
 ----
-oasis.txt
+> oasis.txt
 ----
 Somit wird eine Textdatei angelegt mit dem namen 'oasis'
 
+Um dies wieder zu Entfernen benutzen wir den Befehl:
+
+----
+rm oasis.txt
+----
+
+um eine Datei oder Verzeichnis zu Verschieben oder Uzumbenennen:
+
+----
+mv /path/­to/file /path/­where/­to/move 
+----
+
+um eine Datei oder Verzeichnes zu Kopieren:
+
+----
+cp /path/­to/file /path/­whe­re/­to/copy 
+----
 
 == SSH
 
