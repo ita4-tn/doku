@@ -47,7 +47,7 @@ Asciidoctor erzeugt seine dateien im *.adoc* Format. Dieses Format eignet sich h
 
 Um verschiedene Überschriften zu erstellen, damit man im Text eine Struktur der Form bekommt, kann man mit unterschiedlichen Anzahlen des Zeichens *=* arbeiten. So wird die Hauptüberschrift mit einem einzelnen *=* gekennzeichnet und alle darauffolgenden Unterüberschriften um jeweils ein *=* ergänzt
 
-= Hauptüberschrift des Textes
+#= Hauptüberschrift des Textes
 
 ----
 = Hauptüberschrift des Textes
@@ -235,7 +235,7 @@ Um Listen zu erstellen verwenden wir die Zeichen * und .
 
 In der Ausgabe wird dann folgendes erscheinen:
 
-==== Autos
+=== Autos
 
 * Audi
 * Tesla
