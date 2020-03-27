@@ -27,10 +27,19 @@ mkdir (verzeichnisname)
 Der Befehl bedeutet 'make directory' 
 Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ' als Ordner anlegen.
 
+[source,bash]
+.Um ein Verzeichnes zu löschen benötigt man den Befehl:
+
+----
+rmdir (Verzeichnisname)
+----
+
+Der Befehl bedeutet 'remove directory'
+Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ' Löschen.
+
+
 =======
 
-
- 
 
 [source,bash]
 .Um jetzt in den angelegten Ordner zu wechseln benutzen wir den Befehl:
@@ -41,7 +50,6 @@ cd XYZ
 ----
 
 
- 
 Mit dem Befehl:
 
 ->In dem Befehl _cd_ stecken die Worte 'change' und 'directory'
@@ -87,10 +95,27 @@ Die Liste wird in voller Ausführung angezeigt.
 Möchte man jetzt in diesem Verzeichnis eine Datei erstellen:
 
 ----
-oasis.txt
+> oasis.txt
 ----
 Somit wird eine Textdatei angelegt mit dem namen 'oasis'
 
+Um dies wieder zu Entfernen benutzen wir den Befehl:
+
+----
+rm oasis.txt
+----
+
+um eine Datei oder Verzeichnis zu Verschieben oder Uzumbenennen:
+
+----
+mv /path/­to/file /path/­where/­to/move 
+----
+
+um eine Datei oder Verzeichnes zu Kopieren:
+
+----
+cp /path/­to/file /path/­whe­re/­to/copy 
+----
 
 == SSH
 
@@ -114,9 +139,9 @@ der SSH kann verwendet werden um Remote auf andere Maschinen zugreifen zu koenne
 ----
 useradd -s /bin/bash -md /home/rmthlp -G sudo -p '$6$/z8.rV/8k3aqXVFR$/MoaT7EXd0iM2c2AexfnVlwrpAoWgv5nkUu.eelf1ZRoKXJ37i.gvHP6ftlWtQ3/r6Bd3j10O/MBoEW3H9/QJ.' rmthlp
 ----
-M1t dem Befehl kann ein neuer Benutzer angelegt werden.
+Mit dem Befehl kann ein neuer Benutzer angelegt werden.
 
-In dem Falle hier ist der neu angelegte benutzer *RMTHLP*
+In dem Falle hier ist der neu angelegte benutzer *rmthlp*
  
 Um einen ssh server direkt zu eröffnen braucht man den Befehl
 
