@@ -14,7 +14,7 @@ Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, mitei
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
 daher wird keine Installation benötigt wenn man auf einer Linus Distribution arbeitet.
 
-=======
+
 
 
 [source,bash]
@@ -36,9 +36,6 @@ rmdir (Verzeichnisname)
 
 Der Befehl bedeutet 'remove directory'
 Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ' Löschen.
-
-
-=======
 
 
 [source,bash]
@@ -146,7 +143,7 @@ In dem Falle hier ist der neu angelegte Benutzer *rmthlp*
 Um einen ssh server direkt zu eröffnen braucht man den Befehl
 
 
-=======
+
 [source,bash]
 .Die Auflistung in langer Ausführung zB im _Home_ Verzeichnis bekommt man mit
 
@@ -173,6 +170,6 @@ ss -tnlpe
 ----
 Mit dem Befehl wird die aktuelle Information zu den einzelnen Verbindungen des Systems angezeigt
 
-=== Ausgabe
+== Ausgabe
 Die Ausgabe findet ausschliesslich in textbasierter Ausgabe in der shell statt
 
