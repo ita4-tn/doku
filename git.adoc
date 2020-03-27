@@ -13,7 +13,7 @@ Die Versionsheschichte wird bei Git durch eine einfach verkettete Liste abgebild
 == Installation von Git unter der Linux Distribution Ubuntu
 
 [source,bash]
-.mit folgendem Befehl wird Git installiert
+.Mit folgendem Befehl wird Git installiert
 ----
 sudo apt-get install git
 ----
@@ -27,7 +27,7 @@ sudo apt-get install git
 
 
 [source,bash]
-.folgende Befehle tragen Name und E-Mail Adresse in die Git Config ein
+.Folgende Befehle tragen Name und E-Mail Adresse in die Git Config ein
 ----
 git config --global user.name "Max Mustermann"
 ----
@@ -52,8 +52,10 @@ darin ein neues Repository. Gibt es bereits sowohl das Verzeichnis wie auch ein 
 Git gar nichts.
 
 === Den aktuellen Status anzeigen
+
+
 [source,bash]
-.in das Verzeichnis wechseln und den aktuellen Status anzeigen
+.In das Projekt Verzeichnis wechseln und den aktuellen Status anzeigen
 ----
 cd "Projektname"
 ----
@@ -81,14 +83,14 @@ Allerdings ist dieser Commit noch nicht vollzogen — wir haben ihn bisher ledig
 -> um genau zu sein, haben wir die Datei dem 'Index' hinzugefügt, einer Zwischenstufe, in der die Änderungen für den nächsten _Commit_gesammelt werden.
 
 [source,bash]
-.mit dem Kommando _git commit_ den ersten Commit erstellen und mit der Option _-m_ wird eine Commit Message übergeben.
+.Mit dem Kommando _git commit_ den ersten Commit erstellen und mit der Option _-m_ wird eine Commit Message übergeben.
 ----
 git commit -m "erste Version"
 ----
 -> Git bestätigt, dass der Vorgang erfolgreich abgeschlossen wurde und die Datei von nun an verwaltet wird. 
 
 [source,bash]
-.jetzt lässt sich mit _git status_ das ganze nochmal überprüfen. Git sollte jetzt ausgeben das, dass Repository _sauber_ ist.
+.Jetzt lässt sich mit _git status_ das ganze nochmal überprüfen. Git sollte jetzt ausgeben das, dass Repository _sauber_ ist.
 ----
 git status
 On branch master
@@ -151,7 +153,7 @@ _Private_ Repositorys sind nicht für jeden einsehbar, lassen sich allerdings nu
 -> Nachdem man einen Namen für das Repository vergeben hat, fragt GitHub ob eine README Datei angelegt werden soll.
 Dies ist idR sinnvoll, da dort wichtige Informationen hinterlegt werden können.
 
-=== _Clonen_ von Repositories 
+=== Clonen von Repositories 
 
 [source,bash]
 .Um ein Repository zu _clonen_, muss man den Link aus des jeweiligen Repository von GitHub kopieren und nach dem folgenden Befehl einfügen.
@@ -170,9 +172,53 @@ git pull
 [source,bash]
 .Um seine _lokal_ gespeicherten Dateien mit dem GitHub Repository zu synchronisieren wird folgender Befehl eingegeben
 ----
-git push
+git push origin master
 ----
 
+=== Git Branching und Merging
+
+Git-Branches sind quasi Verweise auf eine Änderung, ohne diese direkt in den Master Branch zu übernehmen. So ist es weniger wahrscheinlich, dass evtl. Fehler in den Master Branch übernommen werden.
+
+
+[source,bash]
+.Um alle Branches in deinem Repository aufzuführen 
+----
+git branch
+----
+
+[source,bash]
+.Um einen neuen Branch zu erstellen
+----
+git branch *NAME*
+----
+-> der neue Branch wird jedoch nicht _ausgecheckt_
+
+[source,bash]
+.Um einen angelegten Branch zu löschen
+----
+git branch -d *NAME*
+----
+-> mit groß geschriebenem _-D_, wird das löschen erzwungen. Selbst wenn es noch nicht gemergte Commits in dem Branch gibt.
+
+[source,bash]
+.Um zu einem Branch zu wechseln
+----
+git checkout *NAME*
+----
+
+-> alle Änderungen die unter einem anderem Branch als dem Master-Branch durchgeführt wurden, sind im Repository auch nur unter dem Branch verfügbar und nicht im Master-Branch.
+
+[source,bash]
+.Um das lokale Repository mit den neuesten Änderungen zu aktualisieren. Zum Bsp. wenn vorher von einem anderen Gerät aus am Repository gearbeitet wurde.
+----
+git pull origin *BRANCHNAME*
+----
+
+[source,bash]
+.Um seine Änderungen in seinem Branch an GitHub zu übertragen
+----
+git push origin *BRANCHNAME*
+----
 
 
 
@@ -203,7 +249,7 @@ git init
 vi beispiel.txt
 ----
 
--> Hier wird VIM als Editor zum erstellen der Datei verwendet.
+-> In diesem Beispiel wird _VIM_ als Editor zum erstellen der Datei verwendet.
 
 [source,bash]
 .Die erstellte Datei zu git hinzufügen
@@ -214,7 +260,7 @@ git add beispiel.txt
 ==== Dateien synchronisieren
 
 [source,bash]
-.damit Git weiß, welches das Remote Repository auf GitHub ist, wird folgender Befehl eingegeben  
+.Damit Git weiß, welches das Remote Repository auf GitHub ist, wird folgender Befehl eingegeben  
 ----
 git remote add origin "Link von Github repository"
 ----
@@ -229,29 +275,37 @@ git pull origin master
 === Dateien von unserem System mit github synchronisieren
 
 [source,bash]
-.da eine neue .txt Datei erstellt wurde, muss Git das durch einen _Commit_ mitgeteilt werden
+.Da eine neue .txt Datei erstellt wurde, muss Git das durch einen _Commit_ mitgeteilt werden
 ----
 git commit -m "Änderung"
 ----
 
 [source,bash]
-.bevor die _lokalen_ Änderungen mit dem GitHub Repository synchronisiert werden, kann man alles nochmal mit folgendem Befehl überprüfen
+.Bevor die _lokalen_ Änderungen mit dem GitHub Repository synchronisiert werden, kann man alles nochmal mit folgendem Befehl überprüfen
 ----
 git status
 ----
 
 [source,bash]
-.wenn _git status_ keine Probleme angezeigt hat, synchronisiert man die _lokalen_ Änderungen mit dem _Remote_ Repository auf GitHub
+.Wenn _git status_ keine Probleme angezeigt hat, synchronisiert man die _lokalen_ Änderungen mit dem _Remote_ Repository auf GitHub
 ----
 git push -u origin master
 ----
  
 
+=== Zu einem früheren Commit zurückkehren
 
+-> Wenn man aus irgendeinem Grund zu einem früherem Zeitpunkt zurückkehren möchte, zeigt sich der große Vorteil von Git.
+Da alle vergangenen Versionen einer Datei über die _Commits_ gespeichert sind, kann man einfach zu einer früheren Version zurückkehren.
 
-
-
-
+[source,bash]
+.Mit folgendem Befehl, kann man zu einer früheren Version zurückkehren. 
+----
+git checkout *Commit-Nr.*
+----
+----
+git show *Commit-Nr.*:*DateiName*
+----
 
 
 

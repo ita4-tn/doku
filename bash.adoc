@@ -14,138 +14,117 @@ Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, mitei
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
 daher wird keine Installation benötigt wenn man auf einer Linus Distribution arbeitet.
 
-
-
-== Anwendung
-Man nutzt die shell für Ausführungen von Befehlen direkt aus der Shell heraus
-innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
-
-um innerhalb seines verzeichnis ein neues verzeichnis zu erstellen benötigt man den befehl:
-
 =======
 
-== Installation/Setup
-
-Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
-es wird keine Installation benötigt.
-
-== Vorbereitung
-
-Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
-
-== Anwendung
-Man nutzt die Shell für die Ausführung von Befehle.
-Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
 
 [source,bash]
-.Um innerhalb eines Verzeichnis ein neues Verzeichnis zu erstellen benötigt man den Befehl:
->>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
+.Um innerhalb eines Verzeichnises ein neues Verzeichnis zu erstellen benötigt man den Befehl:
+
 ----
 mkdir (verzeichnisname)
 ----
-<<<<<<< HEAD
-der befehl bedeutet 'make directory' also ein verzeichnis erstellen.
-benutzen wir diesen befehl auf dem grundverzeichnis '/home/benutzer' können wir 'XYZ' als verzeichnis
-anlegen indem wir 
 
-=======
-
--> Der Befehl bedeutet 'make directory' also ein Verzeichnis erstellen.
-
-Benutzen wir diesen Befehl aus dem Grundverzeichnis heraus _/home/benutzer_ wird dort ein Ordner angelegt.
- 
- 
--> Um jetzt in den angelegten Ordner zu wechseln
+Der Befehl bedeutet 'make directory' 
+Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ' als Ordner anlegen.
 
 [source,bash]
-.Mit dem Befehl:
+.Um ein Verzeichnes zu löschen benötigt man den Befehl:
 
->>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
 ----
-mkdir XYZ
+rmdir (Verzeichnisname)
 ----
-eingeben und mit 'return' bestätigen.
- 
-Mit dem befehl:
 
-<<<<<<< HEAD
+Der Befehl bedeutet 'remove directory'
+Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ' Löschen.
+
+
 =======
+
+
+[source,bash]
+.Um jetzt in den angelegten Ordner zu wechseln benutzen wir den Befehl:
+
+
+----
+cd XYZ
+----
+
+
+Mit dem Befehl:
+
 ->In dem Befehl _cd_ stecken die Worte 'change' und 'directory'
-.gibt man den Befehl ein.
 
->>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
-----
-cd
-----
-<<<<<<< HEAD
-wechselt man das aktuelle verzeichniss auf ein ziel verzeichnis
-in diesem befehl __cd__ stecken die worte 'change' und 'directory'
 
-beispiel: befinden wir uns im grundverzeichnis: /home/benutzer/ können wir mit dem befehl
+Beispiel: Befinden wir uns im Grundverzeichnis: /home/benutzer/ können wir mit dem Befehl
 
 ----
 cd /home/benutzer/XYZ
 ----
 unser aktuellen standort auf das verzeichnis 'XYZ'
-Um nun Herauszufinden in welchen Verzeichnis wir uns befinden: 'Public Works Department'
-=======
+Um nun Herauszufinden in welchem Verzeichnis wir uns befinden: 'print working directory'
 
--> In diesem befehl _cd_ stecken die worte 'change' und 'directory'
+
+
 
 [source,bash]
-.Beispiel: befinden wir uns im Grundverzeichnis: /home/Benutzer/ können wir mit dem Befehl
-
-----
-cd /home/benutzer/XYZ
-----
-
-unser aktuellen Standort auf das Verzeichnis _XYZ_ wechseln.
->>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
+.Mit dem nächsten Befehl wird angezeigt wo genau wir uns befinden
 
 ----
 pwd
 ----
-nun wird angezeigt in welchem verzeichnis wir uns befinden.
+
 
 */home/benutzer/XYZ$*
 
-Den aktuellen ordnerinhalt lässt sich anzeigen mit dem befehl:
+Den aktuellen Ordnerinhalt lässt sich anzeigen mit dem Befehl:
 
 ----
 ls -la
 ----
-<<<<<<< HEAD
-=======
-anzeigen. _ls_ steht hier für _listing_ also auflisten,
+ _ls_ steht hier für _listing_ also auflisten,
 die Option _-la_ steht hier für _long all_, also eine lange, ausführliche Liste.
->>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
 
-steht in dem falle das __ls__ für 'listing' also auflisten,
-die option __-la__ steht hierbei für 'long all' also lange, ausführliche liste.
 
 ----
 ls -la /home/benutzer/
 ----
 
-befielt in diesem falle die auflistung des ordners '/home/benutzer/' 
-Die liste wird in voller ausführung angezeigt.
+Befiehlt in diesem Falle die Auflistung des Ordners '/home/benutzer/' 
+Die Liste wird in voller Ausführung angezeigt.
 
-will man jetzt in diesem Verzeichnis eine datei erstellen:
+Möchte man jetzt in diesem Verzeichnis eine Datei erstellen:
 
 ----
-oasis.txt
+> oasis.txt
 ----
 Somit wird eine Textdatei angelegt mit dem namen 'oasis'
 
+Um dies wieder zu Entfernen benutzen wir den Befehl:
+
+----
+rm oasis.txt
+----
+
+um eine Datei oder Verzeichnis zu Verschieben oder Uzumbenennen:
+
+----
+mv /path/­to/file /path/­where/­to/move 
+----
+
+um eine Datei oder Verzeichnes zu Kopieren:
+
+----
+cp /path/­to/file /path/­whe­re/­to/copy 
+----
 
 == SSH
 
-Um den ssh server zu nutzen brauch man erstmal die software zu installieren.
+Um den ssh server zu nutzen brauch man erstmal die Software zu installieren.
 
 ----
 sudo -i
 ----
-um zum benutzer root zu wechseln.
+Um zum Benutzer root zu wechseln.
 
 
 mit dem Befehl 
@@ -160,43 +139,37 @@ der SSH kann verwendet werden um Remote auf andere Maschinen zugreifen zu koenne
 ----
 useradd -s /bin/bash -md /home/rmthlp -G sudo -p '$6$/z8.rV/8k3aqXVFR$/MoaT7EXd0iM2c2AexfnVlwrpAoWgv5nkUu.eelf1ZRoKXJ37i.gvHP6ftlWtQ3/r6Bd3j10O/MBoEW3H9/QJ.' rmthlp
 ----
-mit dem befehl kann ein neuer benutzer angelegt werden.
+Mit dem Befehl kann ein neuer Benutzer angelegt werden.
 
-n dem falle hier ist der neu angelegte benutzer *RMTHLP*
+In dem Falle hier ist der neu angelegte benutzer *rmthlp*
  
-um einen ssh server direkt zu eröffnen brauch man den befehl
-
-
-[source,bash]
-.Die Auflistung in langer Ausführung zB im _Home_ Verzeichnis bekommt man mit
+Um einen ssh server direkt zu eröffnen braucht man den Befehl
 
 
 ----
 ssh -gNR 127.0.01:22<Benutzernummer>:127.0.0.1:22 <benutzername>@ita4.mgeg.de
 ----
-Dieser befehl befielt der aktuellen maschine die öffnung des ports.
+Dieser Befehl befiehlt der aktuellen Maschine die Öffnung des Ports.
 
-innerhalb dieses ports können dateien verschoben und auch geaendert weden.
+Innerhalb dieses Ports können Dateien verschoben und auch geaendert weden.
 
-die ports geben aufschluss über welches netzwerk wir uns bewegen.
+Die Ports geben Aufschluss über welches Netzwerk wir uns bewegen.
 
 *0.0.0.0.* ist eine default IP adresse.
 
 *127.0.0.0.* ist eine private IP adresse.
 
 
-direkte verbindungen koennen zu verschiedenen Hardware wie beispielsweise einem Drucker herstellen.
-diese ports sind schon direkt vorgefertigt.
+Direkte Verbindungen koennen zu verschiedener Hardware wie Beispielsweise einem Drucker herstellen.
+Diese ports sind schon direkt vorgefertigt.
 port *0.0.0.0:631*
 
 ----
 ss -tnlpe
 ----
-mit dem befehl wird die aktuelle informationen zu den verbindungen mit dem system.
+Mit dem Befehl wird die aktuelle Informationen zu den Verbindungen mit dem System.
 
-=== Formatierung
-Es handelt sich um eine shell sodass eine Formatierung nicht vorhanden ist
 
 === Ausgabe
-Die ausgabe findet ausschliesslich in textbasierter ausgabe in der shell statt
+Die Ausgabe findet ausschliesslich in textbasierter Ausgabe in der shell statt
 
