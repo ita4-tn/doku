@@ -9,6 +9,7 @@ Mit Git wird die meiste Zeit in dieser lokalen Datenbank gearbeitet und tauscht 
 Die Versionsheschichte wird bei Git durch eine einfach verkettete Liste abgebildet, in der die einzelnen _Knotenpunkte_ durch die Commits repräsentiert werden.
 
 
+
 == Installation von Git unter der Linux Distribution Ubuntu
 
 [source,bash]
@@ -20,7 +21,7 @@ sudo apt-get install git
 -> der Teil _apt-get_ ändert sich je nach installierter Linux Distribution. 
 
 
-== Autor und E-Mail Adresse in die Git Config einfügen
+=== Autor und E-Mail Adresse in die Git Config einfügen
 
 -> Zu Beginn wird in die _Git Config_ der eigene Name und die E-Mail Adresse eingetragen, damit ersichtlich ist wer welchen _Commit_ gemacht hat.
 
@@ -35,7 +36,10 @@ git config --global user.email "email@email.de
 ----
 
 
-== Ein Repository anlegen
+=== Ein Repository anlegen
+
+Ein Repository ist eine Art Projekt, in dem die Dateien _gesammelt_ werden.
+
 
 [source,bash]
 .Damit Git die Dateien verwalten kann, muss ein Repository für das Projekt angelegt werden
@@ -47,7 +51,7 @@ interne Daten verwaltet werden. Sollte das Verzeichnis beispiel/ bereits existie
 darin ein neues Repository. Gibt es bereits sowohl das Verzeichnis wie auch ein Repository, macht
 Git gar nichts.
 
-== Den aktuellen Status anzeigen
+=== Den aktuellen Status anzeigen
 [source,bash]
 .in das Verzeichnis wechseln und den aktuellen Status anzeigen
 ----
@@ -60,26 +64,29 @@ git status
 -> Git gibt einen Hinweis aus, das man vor dem ersten Commit steht, Git aber nichts gefunden hat.
 -> Git liefert noch einen Hinweis welche Schritte sich als nächstes anbieten
 
-== Erster Commit
+=== Der erste Commit
+
+Nachdem man _lokal_ eine Datei erstellt oder verändert hat, muss man dieses durch einen _Commit_ in Git eintragen.
+In den _Commit_ wird _kurz und knapp_ eingetragen, was hinzugefügt bzw.geändert wurde. 
+
 
 [source,bash]
-.Eine Datei Git zur Verwaltung übergeben
+.Eine Datei Git zur Verwaltung übergeben bzw. nach einer Änderung 
 ----
 git add "Datei"
 ----
 
 -> Git wird die Veränderungen — also unsere neue Datei — beim nächsten Commit übernehmen.
 Allerdings ist dieser Commit noch nicht vollzogen — wir haben ihn bisher lediglich vorbereitet.
--> m genau zu sein, haben wir die Datei dem 'Index' hinzugefügt, einer Zwischenstufe, in der Sie
-Veränderungen, die in den nächsten Commit einfließen sollen, sammeln.
+-> um genau zu sein, haben wir die Datei dem 'Index' hinzugefügt, einer Zwischenstufe, in der die Änderungen für den nächsten _Commit_gesammelt werden.
 
 [source,bash]
 .mit dem Kommando _git commit_ den ersten Commit erstellen und mit der Option _-m_ wird eine Commit Message übergeben.
 ----
 git commit -m "erste Version"
 ----
--> Git bestätigt, dass der Vorgang erfolgreich abgeschlossen wurde und die Datei von nun an verwaltet
-wird.
+-> Git bestätigt, dass der Vorgang erfolgreich abgeschlossen wurde und die Datei von nun an verwaltet wird. 
+
 [source,bash]
 .jetzt lässt sich mit _git status_ das ganze nochmal überprüfen. Git sollte jetzt ausgeben das, dass Repository _sauber_ ist.
 ----
@@ -89,7 +96,7 @@ nothing to commit, working directory clean
 ----
 
 
-== Vergleichen von Revisionen
+=== Vergleichen von Revisionen
 
 [source,bash]
 .Mit den Dateien des "working trees" bzw. des Index vergleichen
@@ -109,7 +116,7 @@ git diff [rev1]..[rev2] -- src/  # Unterschiede in src/ zwischen rev1 und rev2
 ----
 
 
-== Anzeigen der Commit-Historie
+=== Anzeigen der Commit-Historie
 
 [source,bash]
 .Nachdem mehrere Commits erstellt wurden, kann man bei Bedarf zurück schauen und sehen was alles passiert ist mit
@@ -119,44 +126,40 @@ git log
 -> Standardmäßig listet _git log_, ohne Argumente, die in diesem Repository vorgenommenen Commits in umgekehrter chronologischer Reihenfolge auf, d.h. die neuesten Commits werden als erstes angezeigt.
 
 
+
+
 == GitHub.com
 
-GitHub ist ein Onlinedienst, der Software-Entwicklungsprojekte auf seinen Servern bereitstellt (Filehosting). Namensgebend war das Versionsverwaltungssystem Git.
+GitHub.com ist ein Web-Service, der _lokal_ gespeicherte Repositories eines _Teams_ online zusammenführt und so das gemeinsame Arbeiten an Projekten ermöglicht.
 
 [source,bash]
-.Um einen Githubaccount anzulegen muss man zuerst die Homepage von Github aufrufen
-
+.Auf der GitHub Website muss ein Account erstellt werden
 ----
 https://github.com/
 ----
 
-Auf der Seite muss man sich nun einen Account erstellen. Mit einer E-Mailadresse und einem Pseudonym, erstellt man sich nun seinen eigenen Account auf GitHub.com 
-Nun verifiziert man seinen Account über einen Link aus der Bestätigungsmail, damit man mit Github arbeiten kann.
+-> Für einen Account auf GitHub.com werden lediglich eine E-Mail Adresse, ein _Alias_ und ein Passwort benötigt.
 
 
-== Create a new Repository
 
-Ein Repository ist eine Art Projekt, dem man zuerst einen Namen geben muss. 
-Dieser sollte sich auf den Inhalt beziehen, damit man im nachhinein seine Dateien wiederfinden kann.
+=== Erstellen eines Repositories auf GitHub
 
-In der Beschreibung kann man nun etwas eintragen, was den Inhalt beschreibt, ist aber nicht zwingend erforderlich.
+-> Es gibt öffentliche und private Repositorys. +
+Wenn man sein Repository auf _Public_ stellt, kann jeder darauf lesend zugreifen.
+_Private_ Repositorys sind nicht für jeden einsehbar, lassen sich allerdings nur mit einem kostenpflichtigen Account erstellen.
 
-Es gibt öffentliche und private Repositorys. Wenn man sein Repository auf _Public_ stellt, kann jeder darauf zugreifen.
-_Private_ Repositorys lassen sich allerdings nur mit einem kostenpflichtigen Account erstellen.
+-> Nachdem man einen Namen für das Repository vergeben hat, fragt GitHub ob eine README Datei angelegt werden soll.
+Dies ist idR sinnvoll, da dort wichtige Informationen hinterlegt werden können.
 
-
-Im nächsten Schritt fragt GitHub ob eine README Datei angelegt werden soll.
-Dies ist sinnvoll, da dort wichtige Informationen hinterlegt werden können.
-
-
-== Clone a Repository
+=== _Clonen_ von Repositories 
 
 [source,bash]
 .Um ein Repository zu _clonen_, muss man den Link aus des jeweiligen Repository von GitHub kopieren und nach dem folgenden Befehl einfügen.
 ----
 git clone *Link von GitHub.com einfügen*
 ----
-Dieses Verzeichnis steht nun automatisch unter der Kontrolle von Git.
+
+-> Dieses Verzeichnis steht nun automatisch unter der Kontrolle von Git.
 
 [source,bash]
 .Um sein _lokales_ Repository mit dem auf GitHub zu synchronisieren gibt man folgenden Befehl ein
@@ -164,7 +167,7 @@ Dieses Verzeichnis steht nun automatisch unter der Kontrolle von Git.
 git pull
 ----
 
-source,bash]
+[source,bash]
 .Um seine _lokal_ gespeicherten Dateien mit dem GitHub Repository zu synchronisieren wird folgender Befehl eingegeben
 ----
 git push
@@ -173,7 +176,7 @@ git push
 
 
 
-== _Verzeichnis erstellen, unter Git Kontrolle stellen und mit GitHub synchronisieren_
+=== Ein Verzeichnis erstellen, unter Git Kontrolle stellen und mit GitHub synchronisieren - _Ein Beispiel_
 
 
 [source,bash]
@@ -195,10 +198,12 @@ git init
 ----
 
 [source,bash]
-.Dann erstellen wir eine Text Datei
+.Dann erstellen wir eine Text Datei 
 ----
 vi beispiel.txt
 ----
+
+-> Hier wird VIM als Editor zum erstellen der Datei verwendet.
 
 [source,bash]
 .Die erstellte Datei zu git hinzufügen
@@ -206,16 +211,17 @@ vi beispiel.txt
 git add beispiel.txt
 ----
 
-=== Dateien synchronisieren
+==== Dateien synchronisieren
 
 [source,bash]
-.Um eine remote git zu erstellen, geben wir nun den Befehl, mit dem dazugehörigen Link des Administrators des Projektes auf GitHub ein.
+.damit Git weiß, welches das Remote Repository auf GitHub ist, wird folgender Befehl eingegeben  
 ----
 git remote add origin "Link von Github repository"
 ----
 
+
 [source,bash]
-.Im Anschluss laden wir die Dateien herunter und synchronisieren diese mit unserem System
+.Im Anschluss synchronisieren wir unser _lokales_ Repository, mit dem _Remote_ Repository von GitHub
 ----
 git pull origin master
 ----
@@ -223,20 +229,23 @@ git pull origin master
 === Dateien von unserem System mit github synchronisieren
 
 [source,bash]
-.Zuerst muss die gewünscht Datei commitet werden, dazu geben wir den Befehl ein.
+.da eine neue .txt Datei erstellt wurde, muss Git das durch einen _Commit_ mitgeteilt werden
 ----
 git commit -m "Änderung"
 ----
 
-Nun zeigt er die gewänderte Datei unter git status an.
+[source,bash]
+.bevor die _lokalen_ Änderungen mit dem GitHub Repository synchronisiert werden, kann man alles nochmal mit folgendem Befehl überprüfen
+----
+git status
+----
 
 [source,bash]
-.Im Anschluss synchronisieren wir unsere Systemdaten mit dem GitHub Repository
+.wenn _git status_ keine Probleme angezeigt hat, synchronisiert man die _lokalen_ Änderungen mit dem _Remote_ Repository auf GitHub
 ----
 git push -u origin master
 ----
  
-
 
 
 
