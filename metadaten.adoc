@@ -1,0 +1,22 @@
+= metadaten
+
+
+[source,bash]
+#:encoding: utf-8
+#:lang: de
+#:keywords: asciidoc, tables, documentation
+#:revision: 0.5.0
+#:copyright: 
+#:author: 
+#:email: 
+#:toc:
+#:toc-titel: Inhaltsverzeichnis
+
+Copyright: {copyright} +
+Author: {author} +
+eMail: {email} +
+Version: {revision} +
+//vim set: syntax=asciidoc
+
+
+

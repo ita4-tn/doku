@@ -1,21 +1,20 @@
 = TMUX
 
-
--> _der Terminal Multiplexer_
+_der Terminal Multiplexer_
 
 
 == Vorbereitung 
 
 [source,bash]
-.-tmux installieren
+.tmux installieren
 ----
 sudo apt install tmux
 ----
 
-== Tmux starten
+== tmux starten
 
 [source,bash]
-.-neue tmux Session starten
+.Neue tmux Session starten
 ----
 tmux
 ----
@@ -27,19 +26,19 @@ tmux new -s *name*
 ----
 
 [source,bash]
-.-sich einer tmux Session anschließen
+.Sich einer tmux Session anschließen
 ----
 tmux a 
 ----
 
 [source,bash]
-.-tmux Sessions auflisten
+.tmux Sessions auflisten
 ----
 tmux ls
 ----
 
 [source,bash]
-.-tmux Session beenden
+.tmux Session beenden
 ----
 tmux kill-session
 ----
@@ -120,7 +119,7 @@ tmux kill-session
 ->tmuxinator ist ein add-on mit dem Templates fuer neue Sessions erstellt werden koennen
 
 [source,bash]
-.-tmuxinator installieren 
+.tmuxinator installieren 
 ----
 sudo apt install tmuxinator
 ----
@@ -128,7 +127,7 @@ sudo apt install tmuxinator
 ->Nach der Installation, lassen sich Templates wie folgt erstellen
 
 [source,bash]
-.-um bspw. ein Template fuer eine Session mit einem benutzerdef. Namen zu erstellen
+.Um bspw. ein Template fuer eine Session mit einem benutzerdef. Namen zu erstellen
 ----
 tmuxinator new *NAME EINFUEGEN* <1>
 ----
@@ -167,7 +166,7 @@ tmuxinator work
 ----
 
 [source,bash]
-.oder kürzer:
+.Oder kürzer:
 ----
 tmux work
 ----
