@@ -1,0 +1,291 @@
+= GIT
+
+== _Was ist Git?_
+
+Git ist eine _open source_ Software zur verteilten Versionsverwaltung von Dateien. Es läuft auf fast allen modernen Betriebssystemen wie z.B. Linux, Solaris, Windows und in leicht abgewandelter Version auch auf macOS.
+
+Git ist als dezentrales System ausgelegt, es kommt ohne zentrale Datenbank aus. Jeder Nutzer hat _seine eigene_ Datenbank, unter Git wird das _Repository_ gennant. +
+Mit Git wird die meiste Zeit in dieser lokalen Datenbank gearbeitet und tauscht dann die erzeugten Änderungen, _Commits_ genannt, mit anderen Projektbeteiligten aus. Hier wird meist auf Plattformen wie z.B. GitHub.com gesetzt.
+Die Versionsheschichte wird bei Git durch eine einfach verkettete Liste abgebildet, in der die einzelnen _Knotenpunkte_ durch die Commits repräsentiert werden.
+
+
+
+== Installation von Git unter der Linux Distribution Ubuntu
+
+[source,bash]
+.mit folgendem Befehl wird Git installiert
+----
+sudo apt-get install git
+----
+
+-> der Teil _apt-get_ ändert sich je nach installierter Linux Distribution. 
+
+
+=== Autor und E-Mail Adresse in die Git Config einfügen
+
+-> Zu Beginn wird in die _Git Config_ der eigene Name und die E-Mail Adresse eingetragen, damit ersichtlich ist wer welchen _Commit_ gemacht hat.
+
+
+[source,bash]
+.folgende Befehle tragen Name und E-Mail Adresse in die Git Config ein
+----
+git config --global user.name "Max Mustermann"
+----
+----
+git config --global user.email "email@email.de
+----
+
+
+=== Ein Repository anlegen
+
+Ein Repository ist eine Art Projekt, in dem die Dateien _gesammelt_ werden.
+
+
+[source,bash]
+.Damit Git die Dateien verwalten kann, muss ein Repository für das Projekt angelegt werden
+----
+git init "Projektname"
+----
+-> Zunächst erstellt Git das Verzeichnis "Projektname"/, falls es noch nicht existiert. Danach initialisiert Git ein leeres Repository in diesem Verzeichnis und legt dafür ein Unterverzeichnis .git/ an, in dem
+interne Daten verwaltet werden. Sollte das Verzeichnis beispiel/ bereits existieren, erstellt Git
+darin ein neues Repository. Gibt es bereits sowohl das Verzeichnis wie auch ein Repository, macht
+Git gar nichts.
+
+=== Den aktuellen Status anzeigen
+[source,bash]
+.in das Verzeichnis wechseln und den aktuellen Status anzeigen
+----
+cd "Projektname"
+----
+----
+git status
+----
+-> Git gegistriert das sich Dateien in dem Verzeichnis befinden, aber noch nicht unter Git Verwaltung stehen. _untracked_
+-> Git gibt einen Hinweis aus, das man vor dem ersten Commit steht, Git aber nichts gefunden hat.
+-> Git liefert noch einen Hinweis welche Schritte sich als nächstes anbieten
+
+=== Der erste Commit
+
+Nachdem man _lokal_ eine Datei erstellt oder verändert hat, muss man dieses durch einen _Commit_ in Git eintragen.
+In den _Commit_ wird _kurz und knapp_ eingetragen, was hinzugefügt bzw.geändert wurde. 
+
+
+[source,bash]
+.Eine Datei Git zur Verwaltung übergeben bzw. nach einer Änderung 
+----
+git add "Datei"
+----
+
+-> Git wird die Veränderungen — also unsere neue Datei — beim nächsten Commit übernehmen.
+Allerdings ist dieser Commit noch nicht vollzogen — wir haben ihn bisher lediglich vorbereitet.
+-> um genau zu sein, haben wir die Datei dem 'Index' hinzugefügt, einer Zwischenstufe, in der die Änderungen für den nächsten _Commit_gesammelt werden.
+
+[source,bash]
+.mit dem Kommando _git commit_ den ersten Commit erstellen und mit der Option _-m_ wird eine Commit Message übergeben.
+----
+git commit -m "erste Version"
+----
+-> Git bestätigt, dass der Vorgang erfolgreich abgeschlossen wurde und die Datei von nun an verwaltet wird. 
+
+[source,bash]
+.jetzt lässt sich mit _git status_ das ganze nochmal überprüfen. Git sollte jetzt ausgeben das, dass Repository _sauber_ ist.
+----
+git status
+On branch master
+nothing to commit, working directory clean
+----
+
+
+=== Vergleichen von Revisionen
+
+[source,bash]
+.Mit den Dateien des "working trees" bzw. des Index vergleichen
+----
+git diff                         # Vergleich Working Tree - Index
+git diff [rev]                   # Vergleich Working Tree - [rev]
+git diff --cached                # Vergleich Index - HEAD
+git diff --cached [rev]          # Vergleich Index - [rev]
+----
+[source,bash]
+.Revisionen vergleichen
+----
+git diff [rev1] [rev2]           # Vergleich rev1 und rev2
+git diff [rev1]..[rev2]          # Analog, Vergleich rev1 und rev2
+git diff [rev1]..                # Vergleich rev1 und HEAD
+git diff [rev1]..[rev2] -- src/  # Unterschiede in src/ zwischen rev1 und rev2
+----
+
+
+=== Anzeigen der Commit-Historie
+
+[source,bash]
+.Nachdem mehrere Commits erstellt wurden, kann man bei Bedarf zurück schauen und sehen was alles passiert ist mit
+----
+git log
+----
+-> Standardmäßig listet _git log_, ohne Argumente, die in diesem Repository vorgenommenen Commits in umgekehrter chronologischer Reihenfolge auf, d.h. die neuesten Commits werden als erstes angezeigt.
+
+
+
+
+== GitHub.com
+
+GitHub.com ist ein Web-Service, der _lokal_ gespeicherte Repositories eines _Teams_ online zusammenführt und so das gemeinsame Arbeiten an Projekten ermöglicht.
+
+[source,bash]
+.Auf der GitHub Website muss ein Account erstellt werden
+----
+https://github.com/
+----
+
+-> Für einen Account auf GitHub.com werden lediglich eine E-Mail Adresse, ein _Alias_ und ein Passwort benötigt.
+
+
+
+=== Erstellen eines Repositories auf GitHub
+
+-> Es gibt öffentliche und private Repositorys. +
+Wenn man sein Repository auf _Public_ stellt, kann jeder darauf lesend zugreifen.
+_Private_ Repositorys sind nicht für jeden einsehbar, lassen sich allerdings nur mit einem kostenpflichtigen Account erstellen.
+
+-> Nachdem man einen Namen für das Repository vergeben hat, fragt GitHub ob eine README Datei angelegt werden soll.
+Dies ist idR sinnvoll, da dort wichtige Informationen hinterlegt werden können.
+
+=== _Clonen_ von Repositories 
+
+[source,bash]
+.Um ein Repository zu _clonen_, muss man den Link aus des jeweiligen Repository von GitHub kopieren und nach dem folgenden Befehl einfügen.
+----
+git clone *Link von GitHub.com einfügen*
+----
+
+-> Dieses Verzeichnis steht nun automatisch unter der Kontrolle von Git.
+
+[source,bash]
+.Um sein _lokales_ Repository mit dem auf GitHub zu synchronisieren gibt man folgenden Befehl ein
+----
+git pull
+----
+
+[source,bash]
+.Um seine _lokal_ gespeicherten Dateien mit dem GitHub Repository zu synchronisieren wird folgender Befehl eingegeben
+----
+git push
+----
+
+
+
+
+=== Ein Verzeichnis erstellen, unter Git Kontrolle stellen und mit GitHub synchronisieren - _Ein Beispiel_
+
+
+[source,bash]
+.Zuerst erstellen wir ein gewünschtes Verzeichnis mit dem Befehl
+----
+mkdir "name"
+----
+
+[source,bash]
+.Anschließend wechseln wir in das Verzeichnis hinein
+----
+cd "name"
+----
+
+[source,bash]
+.Um das Verzeichnis unter Gitkontrolle zu stellen, benutzen wir den Befehl
+----
+git init
+----
+
+[source,bash]
+.Dann erstellen wir eine Text Datei 
+----
+vi beispiel.txt
+----
+
+-> Hier wird VIM als Editor zum erstellen der Datei verwendet.
+
+[source,bash]
+.Die erstellte Datei zu git hinzufügen
+----
+git add beispiel.txt
+----
+
+==== Dateien synchronisieren
+
+[source,bash]
+.damit Git weiß, welches das Remote Repository auf GitHub ist, wird folgender Befehl eingegeben  
+----
+git remote add origin "Link von Github repository"
+----
+
+
+[source,bash]
+.Im Anschluss synchronisieren wir unser _lokales_ Repository, mit dem _Remote_ Repository von GitHub
+----
+git pull origin master
+----
+
+=== Dateien von unserem System mit github synchronisieren
+
+[source,bash]
+.da eine neue .txt Datei erstellt wurde, muss Git das durch einen _Commit_ mitgeteilt werden
+----
+git commit -m "Änderung"
+----
+
+[source,bash]
+.bevor die _lokalen_ Änderungen mit dem GitHub Repository synchronisiert werden, kann man alles nochmal mit folgendem Befehl überprüfen
+----
+git status
+----
+
+[source,bash]
+.wenn _git status_ keine Probleme angezeigt hat, synchronisiert man die _lokalen_ Änderungen mit dem _Remote_ Repository auf GitHub
+----
+git push -u origin master
+----
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
