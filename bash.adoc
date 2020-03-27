@@ -15,16 +15,29 @@ Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystem
 daher wird keine Installation benötigt wenn man auf einer Linus Distribution arbeitet.
 
 
+== Vorbereitung
+
+Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
+
+== Anwendung
+Man nutzt die Shell für die Ausführung von Befeh.
+Für die Bash wird keine weitere Vorbereitung benötigt. Da es eine vorinstallierte Anwendung ist.
+
+man kann neue verzeichnisse erstellen indem man den befehl:
+=======
 
 [source,bash]
 .Um innerhalb eines Verzeichnises ein neues Verzeichnis zu erstellen benötigt man den Befehl:
+
 
 ----
 mkdir (verzeichnisname)
 ----
 
+
 Der Befehl bedeutet 'make directory' 
 Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ' als Ordner anlegen.
+
 
 [source,bash]
 .Um ein Verzeichnes zu löschen benötigt man den Befehl:
@@ -33,10 +46,12 @@ Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ
 rmdir (Verzeichnisname)
 ----
 
+
 Der Befehl bedeutet 'remove directory' 
 Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ' Löschen.
 
  
+eingeben und mit 'return' bestätigen.
 
 [source,bash]
 .Um jetzt in den angelegten Ordner zu wechseln benutzen wir den Befehl:
@@ -46,9 +61,14 @@ Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ
 cd XYZ
 ----
 
-
  
 Mit dem Befehl:
+
+
+----
+cd
+----
+
 
 ->In dem Befehl _cd_ stecken die Worte 'change' und 'directory'
 
@@ -71,6 +91,10 @@ cd
 Um nun Herauszufinden in welchem Verzeichnis wir uns befinden: 'print working directory'
 
 
+'Beispiel: befinden wir uns im Grundverzeichnis: /home/Benutzer/ können wir mit dem Befehl'
+
+unser aktuellen Standort auf das Verzeichnis _XYZ_ wechseln.
+=======
 [source,bash]
 .Mit dem nächsten Befehl wird angezeigt wo genau wir uns befinden
 
@@ -86,6 +110,10 @@ Den aktuellen Ordnerinhalt lässt sich anzeigen mit dem Befehl:
 ----
 ls -la
 ----
+
+hier steht in dem falle das __ls__ für 'listing' also auflisten,
+die option __-la__ steht hierbei für 'long all' also lange, ausführliche liste.
+=====
  _ls_ steht hier für _listing_ also auflisten,
 die Option _-la_ steht hier für _long all_, also eine lange, ausführliche Liste.
 
@@ -151,9 +179,9 @@ In dem Falle hier ist der neu angelegte benutzer *RMTHLP*
 Um einen ssh server direkt zu eröffnen braucht man den Befehl
 
 
-=======
 [source,bash]
 .Die Auflistung in langer Ausführung zB im _Home_ Verzeichnis bekommt man mit
+
 
 ----
 ssh -gNR 127.0.01:22<Benutzernummer>:127.0.0.1:22 <benutzername>@ita4.mgeg.de
