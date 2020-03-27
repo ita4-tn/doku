@@ -29,7 +29,7 @@ AsciiDoc ist eine vereinfachte Auszeichnungssprache, die dazu dient, Texte in ve
 == Wie installiere ich Asciidoc
 
 [source,bash]
-.Zu allererst muss ich zum Root werden
+.Zu allererst muss ich zum Benutzer Root werden
 ----
 sudo -iu root
 ----
