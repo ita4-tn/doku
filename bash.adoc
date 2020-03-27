@@ -60,8 +60,8 @@ Beispiel: Befinden wir uns im Grundverzeichnis: /home/benutzer/ können wir mit 
 ----
 cd /home/benutzer/XYZ
 ----
-Unser aktuellen Standort auf das Verzeichnis 'XYZ'
-Um nun herauszufinden in welchem Verzeichnis wir uns befinden: 'print working directory'
+unser aktuellen standort auf das verzeichnis 'XYZ'
+Um nun Herauszufinden in welchem Verzeichnis wir uns befinden: 'print working directory'
 
 
 
@@ -97,15 +97,15 @@ Möchte man jetzt in diesem Verzeichnis eine Datei erstellen:
 ----
 > oasis.txt
 ----
-Somit wird eine Textdatei angelegt mit dem Namen 'oasis'
+Somit wird eine Textdatei angelegt mit dem namen 'oasis'
 
-Um dies wieder zu entfernen benutzen wir den Befehl:
+Um dies wieder zu Entfernen benutzen wir den Befehl:
 
 ----
 rm oasis.txt
 ----
 
-um eine Datei oder Verzeichnis zu verschieben oder umzubenennen:
+um eine Datei oder Verzeichnis zu Verschieben oder Uzumbenennen:
 
 ----
 mv /path/­to/file /path/­where/­to/move 
@@ -119,12 +119,12 @@ cp /path/­to/file /path/­whe­re/­to/copy
 
 == SSH
 
-Um den ssh Server zu nutzen zu können muss zuerst die Software installiert werden
+Um den ssh server zu nutzen brauch man erstmal die Software zu installieren.
 
 ----
 sudo -i
 ----
-Mit diesem Befehl wird man zum Benutzer root.
+Um zum Benutzer root zu wechseln.
 
 
 mit dem Befehl 
@@ -141,10 +141,14 @@ useradd -s /bin/bash -md /home/rmthlp -G sudo -p '$6$/z8.rV/8k3aqXVFR$/MoaT7EXd0
 ----
 Mit dem Befehl kann ein neuer Benutzer angelegt werden.
 
-In dem Falle hier ist der neu angelegte Benutzer *rmthlp*
+In dem Falle hier ist der neu angelegte benutzer *rmthlp*
  
 Um einen ssh server direkt zu eröffnen braucht man den Befehl
 
+
+=======
+[source,bash]
+.Die Auflistung in langer Ausführung zB im _Home_ Verzeichnis bekommt man mit
 
 ----
 ssh -gNR 127.0.01:22<Benutzernummer>:127.0.0.1:22 <benutzername>@ita4.mgeg.de
@@ -167,7 +171,8 @@ port *0.0.0.0:631*
 ----
 ss -tnlpe
 ----
-Mit dem Befehl wird die aktuelle Information zu den einzelnen Verbindungen des Systems angezeigt
+Mit dem Befehl wird die aktuelle Informationen zu den Verbindungen mit dem System.
+
 
 === Ausgabe
 Die Ausgabe findet ausschliesslich in textbasierter Ausgabe in der shell statt
