@@ -166,12 +166,11 @@ n dem falle hier ist der neu angelegte benutzer *RMTHLP*
  
 um einen ssh server direkt zu eröffnen brauch man den befehl
 
-<<<<<<< HEAD
-=======
+
 [source,bash]
 .Die Auflistung in langer Ausführung zB im _Home_ Verzeichnis bekommt man mit
 
->>>>>>> 213a16c1aabc2caf8da38c5b3dcca09a114fafd8
+
 ----
 ssh -gNR 127.0.01:22<Benutzernummer>:127.0.0.1:22 <benutzername>@ita4.mgeg.de
 ----
