@@ -1,6 +1,6 @@
 = GIT
 
-==_Was ist Git?_
+== _Was ist Git?_
 
 Git ist eine _open source_ Software zur verteilten Versionsverwaltung von Dateien. Es läuft auf fast allen modernen Betriebssystemen wie z.B. Linux, Solaris, Windows und in leicht abgewandelter Version auch auf macOS.
 
