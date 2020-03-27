@@ -153,7 +153,7 @@ _Private_ Repositorys sind nicht für jeden einsehbar, lassen sich allerdings nu
 -> Nachdem man einen Namen für das Repository vergeben hat, fragt GitHub ob eine README Datei angelegt werden soll.
 Dies ist idR sinnvoll, da dort wichtige Informationen hinterlegt werden können.
 
-=== _Clonen_ von Repositories 
+=== Clonen von Repositories 
 
 [source,bash]
 .Um ein Repository zu _clonen_, muss man den Link aus des jeweiligen Repository von GitHub kopieren und nach dem folgenden Befehl einfügen.
@@ -172,9 +172,53 @@ git pull
 [source,bash]
 .Um seine _lokal_ gespeicherten Dateien mit dem GitHub Repository zu synchronisieren wird folgender Befehl eingegeben
 ----
-git push
+git push origin master
 ----
 
+=== Git Branching und Merging
+
+Git-Branches sind quasi Verweise auf eine Änderung, ohne diese direkt in den Master Branch zu übernehmen. So ist es weniger wahrscheinlich, dass evtl. Fehler in den Master Branch übernommen werden.
+
+
+[source,bash]
+.Um alle Branches in deinem Repository aufzuführen 
+----
+git branch
+----
+
+[source,bash]
+.Um einen neuen Branch zu erstellen
+----
+git branch *NAME*
+----
+-> der neue Branch wird jedoch nicht _ausgecheckt_
+
+[source,bash]
+.Um einen angelegten Branch zu löschen
+----
+git branch -d *NAME*
+----
+-> mit groß geschriebenem _-D_, wird das löschen erzwungen. Selbst wenn es noch nicht gemergte Commits in dem Branch gibt.
+
+[source,bash]
+.Um zu einem Branch zu wechseln
+----
+git checkout *NAME*
+----
+
+-> alle Änderungen die unter einem anderem Branch als dem Master-Branch durchgeführt wurden, sind im Repository auch nur unter dem Branch verfügbar und nicht im Master-Branch.
+
+[source,bash]
+.Um das lokale Repository mit den neuesten Änderungen zu aktualisieren. Zum Bsp. wenn vorher von einem anderen Gerät aus am Repository gearbeitet wurde.
+----
+git pull origin *BRANCHNAME*
+----
+
+[source,bash]
+.Um seine Änderungen in seinem Branch an GitHub zu übertragen
+----
+git push origin *BRANCHNAME*
+----
 
 
 
@@ -205,7 +249,7 @@ git init
 vi beispiel.txt
 ----
 
--> Hier wird VIM als Editor zum erstellen der Datei verwendet.
+-> In diesem Beispiel wird _VIM_ als Editor zum erstellen der Datei verwendet.
 
 [source,bash]
 .Die erstellte Datei zu git hinzufügen
