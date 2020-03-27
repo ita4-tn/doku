@@ -31,24 +31,23 @@ Benutzen wir diesen Befehl im Grundverzeichnis '/home/benutzer' können wir 'XYZ
 
 
  
--> Um jetzt in den angelegten Ordner zu wechseln
 
 [source,bash]
-.Mit dem Befehl:
+.Um jetzt in den angelegten Ordner zu wechseln benutzen wir den Befehl:
 
 
 ----
 cd XYZ
 ----
 
-eingeben und mit 'return' bestätigen.
+
  
-Mit dem befehl:
+Mit dem Befehl:
 
 ->In dem Befehl _cd_ stecken die Worte 'change' und 'directory'
 
 
-Beispiel: befinden wir uns im Grundverzeichnis: /home/benutzer/ können wir mit dem Befehl
+Beispiel: Befinden wir uns im Grundverzeichnis: /home/benutzer/ können wir mit dem Befehl
 
 ----
 cd /home/benutzer/XYZ
