@@ -13,7 +13,7 @@ Die Versionsheschichte wird bei Git durch eine einfach verkettete Liste abgebild
 == Installation von Git unter der Linux Distribution Ubuntu
 
 [source,bash]
-.mit folgendem Befehl wird Git installiert
+.Mit folgendem Befehl wird Git installiert
 ----
 sudo apt-get install git
 ----
@@ -27,7 +27,7 @@ sudo apt-get install git
 
 
 [source,bash]
-.folgende Befehle tragen Name und E-Mail Adresse in die Git Config ein
+.Folgende Befehle tragen Name und E-Mail Adresse in die Git Config ein
 ----
 git config --global user.name "Max Mustermann"
 ----
@@ -52,8 +52,10 @@ darin ein neues Repository. Gibt es bereits sowohl das Verzeichnis wie auch ein 
 Git gar nichts.
 
 === Den aktuellen Status anzeigen
+
+
 [source,bash]
-.in das Verzeichnis wechseln und den aktuellen Status anzeigen
+.In das Projekt Verzeichnis wechseln und den aktuellen Status anzeigen
 ----
 cd "Projektname"
 ----
@@ -81,14 +83,14 @@ Allerdings ist dieser Commit noch nicht vollzogen — wir haben ihn bisher ledig
 -> um genau zu sein, haben wir die Datei dem 'Index' hinzugefügt, einer Zwischenstufe, in der die Änderungen für den nächsten _Commit_gesammelt werden.
 
 [source,bash]
-.mit dem Kommando _git commit_ den ersten Commit erstellen und mit der Option _-m_ wird eine Commit Message übergeben.
+.Mit dem Kommando _git commit_ den ersten Commit erstellen und mit der Option _-m_ wird eine Commit Message übergeben.
 ----
 git commit -m "erste Version"
 ----
 -> Git bestätigt, dass der Vorgang erfolgreich abgeschlossen wurde und die Datei von nun an verwaltet wird. 
 
 [source,bash]
-.jetzt lässt sich mit _git status_ das ganze nochmal überprüfen. Git sollte jetzt ausgeben das, dass Repository _sauber_ ist.
+.Jetzt lässt sich mit _git status_ das ganze nochmal überprüfen. Git sollte jetzt ausgeben das, dass Repository _sauber_ ist.
 ----
 git status
 On branch master
@@ -214,7 +216,7 @@ git add beispiel.txt
 ==== Dateien synchronisieren
 
 [source,bash]
-.damit Git weiß, welches das Remote Repository auf GitHub ist, wird folgender Befehl eingegeben  
+.Damit Git weiß, welches das Remote Repository auf GitHub ist, wird folgender Befehl eingegeben  
 ----
 git remote add origin "Link von Github repository"
 ----
@@ -229,29 +231,37 @@ git pull origin master
 === Dateien von unserem System mit github synchronisieren
 
 [source,bash]
-.da eine neue .txt Datei erstellt wurde, muss Git das durch einen _Commit_ mitgeteilt werden
+.Da eine neue .txt Datei erstellt wurde, muss Git das durch einen _Commit_ mitgeteilt werden
 ----
 git commit -m "Änderung"
 ----
 
 [source,bash]
-.bevor die _lokalen_ Änderungen mit dem GitHub Repository synchronisiert werden, kann man alles nochmal mit folgendem Befehl überprüfen
+.Bevor die _lokalen_ Änderungen mit dem GitHub Repository synchronisiert werden, kann man alles nochmal mit folgendem Befehl überprüfen
 ----
 git status
 ----
 
 [source,bash]
-.wenn _git status_ keine Probleme angezeigt hat, synchronisiert man die _lokalen_ Änderungen mit dem _Remote_ Repository auf GitHub
+.Wenn _git status_ keine Probleme angezeigt hat, synchronisiert man die _lokalen_ Änderungen mit dem _Remote_ Repository auf GitHub
 ----
 git push -u origin master
 ----
  
 
+=== Zu einem früheren Commit zurückkehren
 
+-> Wenn man aus irgendeinem Grund zu einem früherem Zeitpunkt zurückkehren möchte, zeigt sich der große Vorteil von Git.
+Da alle vergangenen Versionen einer Datei über die _Commits_ gespeichert sind, kann man einfach zu einer früheren Version zurückkehren.
 
-
-
-
+[source,bash]
+.Mit folgendem Befehl, kann man zu einer früheren Version zurückkehren. 
+----
+git checkout *Commit-Nr.*
+----
+----
+git show *Commit-Nr.*:*DateiName*
+----
 
 
 
