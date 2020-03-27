@@ -47,7 +47,7 @@ Asciidoctor erzeugt seine dateien im *.adoc* Format. Dieses Format eignet sich h
 
 Um verschiedene Überschriften zu erstellen, damit man im Text eine Struktur der Form bekommt, kann man mit unterschiedlichen Anzahlen des Zeichens *=* arbeiten. So wird die Hauptüberschrift mit einem einzelnen *=* gekennzeichnet und alle darauffolgenden Unterüberschriften um jeweils ein *=* ergänzt
 
-= Hauptüberschrift des Textes
+#= Hauptüberschrift des Textes
 
 ----
 = Hauptüberschrift des Textes
@@ -148,15 +148,16 @@ Dabei ist zu beachten, dass die Beschreibungen direkt nach dem *.* in der zweite
  
 |===
 
-Durch Verändern der Zahlenwerte in den []-Klammern können als Beispiel Breite und Höhe der Tabelle angepasst werden.Man sieht im oberen Abschnitt die einzelnen Bearbeitungsmöglichkeiten um seine .adoc datei zu gestalten. Ebenfalls wird fast bei allen Systemen im asciidoc auch eine farbliches Highlighten aktiviert. Dies zeigt beispielsweise an, welcher Befehl ausgeführt wird oder um welche art der Überschrift es sich handelt. Highlighting ist in diesem falle sinnvoll um besser nachvollziehen zu können was sich in der Befehlszeile befindet.
+Durch Verändern der Zahlenwerte in den []-Klammern können als Beispiel Breite und Höhe der Tabelle angepasst werden.
+
 
 == Diagramme
 
 [source,bash]
-.Um Diagramme erstellen zu können und sie im asciidoctor nutzen zu nutzen,benötigt es die vorhergehende zeile *[ditaa]*.
+.Um Diagramme erstellen zu können und sie im asciidoctor zu nutzen,benötigt es die vorhergehende zeile *[ditaa]*.
 
 ----
- 
+[ditaa] 
 ....
                    +-------------+
                    | Asciidoctor |-------+
@@ -176,31 +177,105 @@ Durch Verändern der Zahlenwerte in den []-Klammern können als Beispiel Breite 
 ----
 
 
-----
-....
+In der Ausgabe erscheint das Diagramm dann so:
+
 [ditaa]
-
-                   +-------------+
-                   | Asciidoctor |-------+
-                   |   diagram   |       |
-                   +-------------+       | PNG out
-                       ^                 |
-                       | ditaa in        |
-                       |                 v
 ....
-----
+                   +-------------+                                                                      
+                   | Asciidoctor |-------+                                                              
+                   |   diagram   |       |                                                              
+                   +-------------+       | PNG out                                                      
+                       ^                 |                                                              
+                       | ditaa in        |                                                              
+                       |                 v                                                              
+ +--------+   +--------+----+    /---------------\
+ |        | --+ Asciidoctor +--> |               |                                                      
+ |  Text  |   +-------------+    |   Beautiful   |                                                      
+ |Document|   |   !magic!   |    |    Output     |                                                      
+ |     {d}|   |             |    |               |                                                      
+ +---+----+   +-------------+    \---------------/                                              
+....
 
 
-[source,bash]
-.Grafiken, Tabellen und Ähnliches können entweder mühsam per Hand, oder einfacher durch die unten stehenden Links erzeugt, kopiert und eingefügt werden.
+
+
+
+Grafiken, Tabellen und Ähnliches können entweder mühsam per Hand, oder einfacher durch die unten stehenden Links erzeugt, kopiert und eingefügt werden.
 
 http://stable.ascii-flow.appspot.com/#Draw
 
 http://asciiflow.com/
 
 
+== Listen
 
-=== Features
+Um Listen zu erstellen verwenden wir die Zeichen * und .
+
+----
+==== Autos
+
+* Audi
+* Tesla
+* Mosler
+
+----
+
+----
+=== Motorräder
+
+. Honda
+.. Kawasaki
+... Suzuki
+. Harley Davidson
+. Kreidler
+
+----
+
+
+
+In der Ausgabe wird dann folgendes erscheinen:
+
+=== Autos
+
+* Audi
+* Tesla
+* Mosler
+
+=== Motorräder
+
+. Honda
+.. Kawasaki
+... Suzuki
+. Harley Davidson
+. Kreidler
+
+
+
+== Checkboxen
+
+Checkboxen können wir wie folgt erstellen:
+
+----
+* [*] checked
+* [x] also checked
+* [ ] not checked
+*     normal list item
+----
+
+
+Die Ausgabe sieht dann so aus:
+
+
+* [*] checked
+* [x] also checked
+* [ ] not checked
+*     normal list item
+
+
+
+
+
+=== PDF Erstellung durch Ascii
 
 [source,bash]
 .Asciidoctor kann mit vielen verschiedenen Features ausgestattert werden.Diese Features sind vielseitig einsetzbar.In unserem Fall ist es asciidoctor-PDF. Wir erzeugen dabei eine Datei im *.pdf* Format.
@@ -215,7 +290,7 @@ asciidoctor-pdf beispiel.adoc
 ----
 
 [source,bash]
-.Es wird im Hintergund die *.adoc* datei kopiert und in eine *.pdf* datei umgewandelt.In unserem ordner _/home/desktop/_ befinden sich nun 2 Dateien.
+.Durch diesen Befehl wird die *.adoc* Datei in eine *.pdf* datei umgewandelt.In unserem Ordner _/home/desktop/_ befinden sich nun 2 Dateien.
 
 `beispiel.adoc` & `beispiel.pdf`
 
