@@ -14,14 +14,6 @@ Bash-Skripte sind geeignet um Programme, gemäß der eigenen Bedürfnisse, mitei
 Die Bash ist eine vorinstallierte Shell auf den meisten GNU/Linux Betriebssystemen
 daher wird keine Installation benötigt wenn man auf einer Linus Distribution arbeitet.
 
-
-
-== Anwendung
-Man nutzt die shell für Ausführungen von Befehlen direkt aus der Shell heraus
-innerhalb der shell kann man sich per befhle in den verzeichnissen bewegen.
-
-um innerhalb seines verzeichnis ein neues verzeichnis zu erstellen benötigt man den befehl:
-
 =======
 
 
