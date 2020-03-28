@@ -1,10 +1,10 @@
 = Remotehelp über eine SSH Verbindung
 
-Mittels SSH _Secure Shell_ kann eine verschlüsselte Verbindung zur Kommandozeile _Shell_ des _SSH Servers_ hergestellt werden. So ist es möglich _Remote_ Hilfe zu bekommen, da Befehle von der _Hilfe gebenden_ auf dem System eingegeben werden können.
-SSH Clients gint es für quasi alle verwendeten Betriebssysteme, unter Windows 10 ist z.B. ein SSH Client für die Kommandozeile vorinstalliert.
-Der bekannteste SSH Client für Windows ist jedoch das Programm _PuTTY_.
+Mittels SSH _Secure Shell_ kann eine verschlüsselte Verbindung zur Kommandozeile _Shell_ des _SSH Servers_ hergestellt werden. So ist es möglich _Remote_ Hilfe zu bekommen, da Befehle von der _Hilfe gebenden_ Person auf dem System direkt eingegeben werden können.
+SSH-Clients gibt es für quasi alle verwendeten Betriebssysteme, unter Windows 10 ist z.B. ein SSH Client für die Kommandozeile vorinstalliert.
+Der bekannteste SSH-Client für Windows ist jedoch das Programm _PuTTY_.
 
-Hier geht es aber um die Verwendung von SSH unter Linux als Betriebssystem.
+Hier geht es allerdings um die Verwendung von SSH unter Linux als Betriebssystem.
 
 
 
