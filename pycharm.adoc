@@ -1,39 +1,37 @@
-= Pycharm
+= PyCharm
 
-PyCharm ist eine integrierte Entwicklungsumgebung (IDE) für die Programmiersprache Python.
+PyCharm ist eine intergrierte Entwicklungsumgebung _IDE_ für die Programmiersprache Python.
+
 
 == Installation
 
 
-Um Pycharm zu installieren kann man sich entweder auf der Internetseite die passende Version herunterladen. Den Downloadlink findet man unter folgendem Link
+Um PyCharm zu installieren kann man sich entweder auf der Website von _JetBrains_ die passende Version herunterladen oder, sofern Ubunutu als Betriebssystem genutzt wird, PyCharm direkt über den _Ubuntu Store_ installieren.
 
 
+[source,bash]
+.Der Download ist unter folgender URL zu finden
 ----
 https://www.jetbrains.com/de-de/pycharm/download/#section=linux
 ----
-
-Oder man installiert sich, sofern man eine Ubuntu Distribution besitzt, Pycharm direkt über den Ubuntustore auf seinem System.
-
-Wenn man den Downloadlink benutzt hat man die Auswahl zwischen einer kostenfreien und einer kostenpflichtigen Version. Die kostenlose Version ist die Communityversion.
-
-Wenn man eine Version heruntergeladen hat, entpackt man diese Datei zunächst und öffnet das Verzeichnis mit dem Befehl
-
+-> es stehen zwei Versionen von PyCharm zum Download. Eine kostenfreie _Community Version_ und eine kostenpflichtige _Professional Version_. 
 
 [source,bash]
-
+.Nach dem download, entpackt man die Archivdatei zunächst und öffnet das Verzeichnis mit dem Befehl
 ----
 cd pycharm-community-2019.3.4/bin
 ----
+-> Hier wurde die Archivdatei in das _Home_ Verzeichnis entpackt.
+
 
 [source,bash]
-.Im Anschluss öffnet man das Programm um es zu installieren.
-.im Anschluss fürht man das command zu instalieren.
+.Im Anschluss öffnet man das _Setup_ um PyCharm zu installieren.
 ----
 pycharm.sh
 ----
 
-* Auf der unteren rechten Seite, unter _configure_ kann man sich ein Desktop Icon erstellenlassen 
-
+[source,bash]
+.Auf der unteren rechten Seite, unter _configure_ kann man Auswählen, ob ein Desktop Icon erstellt werden soll.
 ----
 Create desktop entry
 ----

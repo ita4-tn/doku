@@ -1,49 +1,59 @@
 = TMUX
 
-_der Terminal Multiplexer_
+_Der Terminal Multiplexer für die Kommandozeile_
+
+Mit Tmux ist es möglich innerhalb eines Terminals, verschiedene _virtuelle_ Sitzungen zu erzeugen. Es ist möglich Konfigurationen für verschiedene Zwecke zu definieren, so dass jeweils die gewünschte Umgebung zur Verfügung steht.
 
 
 == Vorbereitung 
 
 [source,bash]
-.tmux installieren
+.Tmux installieren
 ----
-sudo apt install tmux
+sudo apt-get install tmux
 ----
+-> der Teil _apt-get_ ändert sich, je nach verwendeter Linux Distribution.
 
-== tmux starten
+
+
+== Tmux starten
 
 [source,bash]
-.Neue tmux Session starten
+.Eine neue Tmux Session starten
 ----
 tmux
 ----
 
 [source,bash]
-.-neue tmux Session mit benutzerdef. Namen starten
+.Eine neue Tmux Session mit benutzerdef. Namen starten
 ----
 tmux new -s *name*
 ----
 
 [source,bash]
-.Sich einer tmux Session anschließen
+.Sich einer Tmux Session anschließen
 ----
 tmux a 
 ----
+-> z.B. über eine vorher definierte SSH Verbindung
+
 
 [source,bash]
-.tmux Sessions auflisten
+.Alle verfügbaren Tmux Sessions auflisten
 ----
 tmux ls
 ----
 
 [source,bash]
-.tmux Session beenden
+.Eine Tmux Session beenden
 ----
 tmux kill-session
 ----
 
-== Fenster (Tabs)
+== Funktionen in Tmux
+
+
+=== Fenster (Tabs)
 -> druecken des Präfixes STRG+b und dann:
 
 [width="60%",cols="<50,<30",options="header"]
@@ -68,7 +78,7 @@ tmux kill-session
 
 |===
 
-== Tabs <splits> 
+=== Tabs <splits> 
 -> druecken des Präfixes STRG+b und dann:
 
 
@@ -94,7 +104,7 @@ tmux kill-session
 
 |=== 
 
-== Sonstiges
+=== Sonstiges
 -> druecken des Präfixes STRG+b und dann:
 
 
@@ -116,15 +126,18 @@ tmux kill-session
 
 
 == Templates fuer neue tmux Sessions erstellen mit _tmuxinator_
+
 ->tmuxinator ist ein add-on mit dem Templates fuer neue Sessions erstellt werden koennen
 
 [source,bash]
-.tmuxinator installieren 
+.Tmuxinator installieren 
 ----
 sudo apt install tmuxinator
 ----
+-> der Teil _apt-get_ ändert sich, je nach verwendeter Linux Distribution
 
-->Nach der Installation, lassen sich Templates wie folgt erstellen
+
+=== Nach der Installation, lassen sich Templates wie folgt erstellen
 
 [source,bash]
 .Um bspw. ein Template fuer eine Session mit einem benutzerdef. Namen zu erstellen
@@ -139,7 +152,7 @@ Bsp.-Struktur sowie in auskommentierter Form mögliche Optionen mitsamt Beschrei
 
 
 
-So kann festgelegt werden, welche Fenster in der Sitzung vorkommen sollen, welche Verzeichnisse in den einzelnen Fenstern aktiv und welche Programme ausgeführt werden sollen:
+-> So kann festgelegt werden, welche Fenster in der Sitzung vorkommen sollen, welche Verzeichnisse in den einzelnen Fenstern aktiv und welche Programme ausgeführt werden sollen:
 
 [source,bash] 
 .#
@@ -157,16 +170,16 @@ windows:
   - mc: mc
 ----
 
--> Eine gemäß diesem Bsp. definierte neue tmux-Sitzung umfasst drei Fenster, die linux, python und mc genannt sind. Im ersten Fenster soll dabei vim aufgerufen werden, im dritten mc; die aktiven Arbeitsverzeichnisse können entweder explizit angegeben werden oder entsprechen dem angegebenen root-Pfad.
+-> Eine gemäß diesem Bsp. definierte neue Tmux-Sitzung umfasst drei Fenster, die linux, python und mc genannt sind. Im ersten Fenster soll dabei der Editor _VIM_ aufgerufen werden, im dritten mc; die aktiven Arbeitsverzeichnisse können entweder explizit angegeben werden oder entsprechen dem angegebenen Root-Pfad.
 
 [source,bash]
-.Die Sitzung kann folgendermaßen erzeugt:
+.Die Sitzung kann folgendermaßen erzeugt werden
 ----
 tmuxinator work
 ----
 
 [source,bash]
-.Oder kürzer:
+.Oder abgekürzt
 ----
 tmux work
 ----
