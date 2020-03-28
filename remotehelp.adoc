@@ -20,19 +20,24 @@ sudo apt-get install openssh-server
 
 -> Befehle sind für die Linux Distribution Ubuntu, der Teil _apt-get_ ändert sich je nach Distribution.
 
+
+
 [source,bash]
 .Zunächst muss ein neuer Benutzer angelegt werden. Wichtig ist hier bei, dass der Befehl in einer Zeile ohne Leerzeichen eingegeben wird. 
 
 ----
 useradd -s /bin/bash -md /home/rmthlp -G sudo -p '$6$/z8.rV/8k3aqXVFR$/MoaT7EXd0iM2c2AexfnVlwrpAoWgv5nkUu.eelf1ZRoKXJ37i.gvHP6ftlWtQ3/r6Bd3j10O/MBoEW3H9/QJ.' rmthlp
 ----
-
+-> Mit diesem Befehl wird ein neuer Benutzer mit dem Namen _*rmthlp*_ angelegt.
 
 [source,bash]
-.Damit eine sichere ssh Verbindung erstellt werden kann, muss auf dem eigenen System ein ssh Tunnel geöffnet werden. Dafür wird folgender Befehl benötigt.
+.Damit eine sichere SSH Verbindung hergestellt werden kann, muss auf dem eigenen System ein SSH-Tunnel geöffnet werden. Dafür wird folgender Befehl benötigt.
 
 ----
 ssh -gNR 127.0.0.1:22<TN>:127.0.0.1:22 <name>@host
 ----
+-> _'TN'_ steht hier für den hinterlegten _Benutzernamen_
 
+
+Jetzt kann eine SSH Verbindung zum System aufgebaut werden.
 
