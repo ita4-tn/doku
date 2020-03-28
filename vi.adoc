@@ -1,6 +1,6 @@
 = VI Improve Befehle
 
-== Einführungsweise Arbeitsweise des VI
+== Einführung und Arbeitsweise des VI
 
 Der VI ist ein modaler Editor. Das bedeutet, dass er zwei Betriebsmodi kennt:
 
