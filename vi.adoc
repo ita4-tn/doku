@@ -1,6 +1,6 @@
-= Vi improve Befehle
+= VI Improve Befehle
 
-== Einführungsweise Arbeitsweise des vi
+== Einführungsweise Arbeitsweise des VI
 
 Der VI ist ein modaler Editor. Das bedeutet, dass er zwei Betriebsmodi kennt:
 
@@ -12,12 +12,18 @@ Der VI ist ein modaler Editor. Das bedeutet, dass er zwei Betriebsmodi kennt:
 
 ** und den ex-Modus (engl. ex mode, benannt nach dem Kommandozeileneditor ex). Die Befehlseingabe wird in der untersten Zeile des vi dargestellt.
 
+
+
 == Installation
+
+
 [bash,source]
 .Installationsbefehl
 ----
-apt-get install vim
+sudo apt-get install vim
 ----
+-> der Teil _apt-get_ ändert sich, je nach verwendeter Linux Distribution
+
 
 == Bewegungstasten
 [width="100%",cols="<40,<60",options="header"]
@@ -99,6 +105,7 @@ apt-get install vim
 |===
 
 == Eingabebefehle
+
 [width="100%",cols="<40,<60",options="header"]
 |===
 |  Taste
